@@ -1,24 +1,25 @@
 <template>
-  <header class="header default border-bottom" >
+  <header class="header default border-bottom">
     <div class="header-section">
       <div class="container ">
         <nav class="navbar navbar-expand-lg">
           <a class="navbar-brand" href="#">
             <div class="d-inline-flex">
-              <img
-                src="@/assets/images/CovidDataProject_100x100.png"
-                width="60"
-                height="60"
-                class="d-inline-block align-top"
-                alt="CovidDataProject"
-              />
+              <router-link to="/" class="nav-link">
+                <img
+                  src="@/assets/images/CovidDataProject_100x100.png"
+                  width="60"
+                  height="60"
+                  class="d-inline-block align-top"
+                  alt="CovidDataProject"
+                />
+              </router-link>
               <div class="d-flex flex-column">
-                <span>
+                <router-link to="/home" class="nav-link">
                   The Covid-19
-                </span>
-                <span>
+                  <br />
                   Colombia Project
-                </span>
+                </router-link>
               </div>
             </div>
           </a>
@@ -39,28 +40,84 @@
             id="navBarMobile"
           >
             <ul class="navbar-nav">
-              <li class="nav-item active">
-                <router-link to="/" class="nav-link" href="#">
+              <li class="nav-item" v-on:click="dropmenu">
+                <router-link
+                  to="/"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  exact
+                >
                   Home
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="/about" class="nav-link" href="#">
+              <li class="nav-item" v-on:click="dropmenu">
+                <router-link
+                  to="/about"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  exact
+                >
                   About Us
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="/team" class="nav-link" href="#">
+              <li class="nav-item" v-on:click="dropmenu">
+                <router-link
+                  to="/team"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  @onclick="dropmenu()"
+                  exact
+                >
                   Who is our team?
                 </router-link>
               </li>
-              <li class="nav-item">
-                <router-link to="/proposes" class="nav-link" href="#">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle font-weight-bold"
+                  href="/proposes"
+                  id="navbarDropdown"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                >
                   Our Proposes
-                </router-link>
+                </a>
+                <div
+                  class="dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                  v-on:click="dropmenu"
+                >
+                  <a class="dropdown-item" href="#">
+                    Novel Coronavirus (2019-nCoV) Data Repository
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    App Covid19 Colombia
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    A novel causal analysis of Colombia COVID-19 deaths
+                  </a>
+                  <a class="dropdown-item" href="#">
+                    COVID-19 Colombia Visual Dashboard
+                  </a>
+                  <div class="dropdown-divider"></div>
+                  <router-link
+                    to="/proposes"
+                    href="#"
+                    class="dropdown-item"
+                    exact
+                  >
+                    Our Proposes
+                  </router-link>
+                </div>
               </li>
-              <li class="nav-item">
-                <router-link to="/contribution" class="nav-link" href="#">
+              <li class="nav-item" v-on:click="dropmenu">
+                <router-link
+                  to="/contribution"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  exact
+                >
                   How to Contribution
                 </router-link>
               </li>
@@ -74,6 +131,29 @@
 
 <script>
 export default {
-  name: "NavBar"
+  name: "NavBar",
+  methods: {
+    dropmenu() {
+      /*
+      var URLactual = window.location;
+      console.log("URLactual: " + URLactual);
+      URLactual = window.location.href;
+      console.log("URLactual: " + URLactual);
+      var pathname = window.location.pathname;
+      console.log("pathname: " + pathname);
+      var URLdomain = window.location.host;
+      console.log("URLdomain: " + URLdomain);
+      var URLhash = window.location.hash;
+      console.log("URLhash: " + URLhash);
+      */
+      var pathname = window.location.pathname;
+      console.log("pathname: " + pathname);
+      if (pathname == "/proposes") {
+        window.$("#navbarDropdown").addClass("active-secondary");
+      } else {
+        window.$("#navbarDropdown").removeClass("active-secondary");
+      }
+    }
+  }
 };
 </script>

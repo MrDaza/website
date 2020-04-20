@@ -28,3 +28,21 @@ $primary: $color-primary !default;
 $color-secondary:#00C9A7 !default; //Color definido
 $secondary: $color-secondary !default;
 
+.active-secondary {
+  color: $secondary !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: $secondary !important;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px #f6f6f6;
+  position: relative;
+  background: #f6f6f6;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}

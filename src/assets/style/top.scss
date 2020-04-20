@@ -2,8 +2,8 @@
   opacity: 0;
   pointer-events: none;
   color: #fff;
-  background-color: #02B795;
-  border-color: #02B795;
+  background-color: $secondary;
+  border-color: $secondary;
 }
 
 .scroll-to-top.active:hover {
@@ -15,8 +15,8 @@
   position: fixed;
   width: 3rem;
   height: 3rem;
-  background-color: #00C9A7;
-  border-color: #00C9A7;
+  background-color: $secondary;
+  border-color: $secondary;
   text-align: center;
   right: 2.875rem;
   bottom: 3.6875rem;

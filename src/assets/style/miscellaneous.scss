@@ -121,7 +121,7 @@ a[data-toggle="tab"] {
 
 .social-icon:hover {
   opacity: .7;
-  color: #ffffff;
+  color: $secondary;
 }
 
 section,
@@ -241,7 +241,7 @@ h6>a,
 .h4>a,
 .h5>a,
 .h6>a {
-  color: #163967;
+  color: $primary;
 }
 
 h1>a:hover,
@@ -256,7 +256,7 @@ h6>a:hover,
 .h4>a:hover,
 .h5>a:hover,
 .h6>a:hover {
-  color: #1ca766;
+  color: $secondary;
 }
 
 .textarea {
