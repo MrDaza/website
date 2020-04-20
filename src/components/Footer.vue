@@ -1,0 +1,123 @@
+<template>
+  <footer class="pb-3 fixed-bottom bg-white">
+    <div class="row">
+      <div class="col">
+        <hr class="my-6" />
+      </div>
+    </div>
+    <div class="container ">
+      <div class="row align-items-md-center">
+        <div class="col-md-4 mb-4 mb-md-0">
+          <div class="d-flex align-items-center">
+            <p class="font-size-14 mb-0">
+              <span>©</span>
+              <span class="text-copyright">&nbsp;Copyright</span>
+              <strong class="text-inhouse">&nbsp;inHouse S.A.S&nbsp;</strong>
+              <br>
+              <span class="text-reserve">2020 all rights reserved.&nbsp;</span>
+            </p>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
+          <ul class="list-inline list-group-flush  text-md-center mb-0 mn-top">
+            <li class="list-inline-item px-2">
+              <p class="font-size-14 mb-0">
+                <span class="text-build">Desarrollado con&nbsp;&nbsp;</span>
+                <a href="https://mr.daza.com.co" target="_black">
+                  <span class="text-love">
+                    &nbsp;❤️ MrDaza
+                  </span>
+                </a>
+              </p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <ul class="list-inline text-sm-right mb-0 font-size-14 mn-top">
+            <li class="list-inline-item px-2">
+              <a class="list-group-item-action " href="https://www.instagram.com/CovidDataProject" target="_blank">
+                <span class="fab fa-instagram"></span>
+              </a>
+            </li>
+            <li class="list-inline-item px-2">
+              <a class="list-group-item-action " href="https://twitter.com/CovidDataPROJ" target="_blank">
+                <span class="fab fa-twitter "></span>
+              </a>
+            </li>
+            <li class="list-inline-item px-2">
+              <a class="list-group-item-action " href="https://github.com/CovidDataProject" target="_blank">
+                <span class="fab fa-github"></span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+</template>
+
+<script>
+export default {
+  name: "Footer"
+}
+</script>
+<style lang="scss" scoped>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 10px 10%;
+}
+.footer-left,
+.footer-right {
+  width: 50%;
+  text-align: center;
+}
+@media (max-width: 1199px) {
+  .footer-left,
+  .footer-right {
+    width: inherit;
+    text-align: center;
+  }
+  .footer-left .text-reserve {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .footer-left,
+  .footer-right {
+    width: inherit;
+    text-align: center;
+  }
+  .footer-left .text-reserve {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .footer-left,
+  .footer-right {
+    width: inherit;
+    text-align: center;
+  }
+  .footer-left .text-reserve,
+  .footer-right .text-build {
+    display: none;
+  }
+}
+@media (max-width: 575px) {
+  .footer-left .text-reserve,
+  .footer-left .text-copyright,
+  .footer-right .text-build {
+    display: none;
+  }
+  .footer-left,
+  .footer-right {
+    width: inherit;
+    text-align: center;
+  }
+}
+</style>
