@@ -1,32 +1,53 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+    <div class="loader">
+      <div class="loader-inner">
+        <svg
+          width="120"
+          height="220"
+          viewbox="0 0 100 100"
+          class="loading-spinner"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            class="spinner"
+            cx="50"
+            cy="50"
+            r="21"
+            fill="#ffffff"
+            stroke-width="3"
+          />
+        </svg>
+      </div>
     </div>
-    <router-view/>
+    <div class="wrapper">
+      <NavBar></NavBar>
+      <router-view />
+      <Footer></Footer>
+    </div>
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+@import "@/assets/webfonts/fonts.scss";
+@import "@/assets/style/my.scss";
+@import "~bootstrap/scss/bootstrap.scss";
+@import "@/assets/style/main.scss";
+</style>
+<script>
+export default {
+  name: "App",
+  mounted() {
+    this.loader();
+  },
+  methods: {
+    loader: () => {
+      window.$(window).on("load", function() {
+        window.$(".loader-inner").fadeOut();
+        window.$(".loader").delay(200).fadeOut("slow");
+      });
     }
   }
 }
-</style>
+</script>
