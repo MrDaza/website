@@ -15,7 +15,7 @@
                 />
               </router-link>
               <div class="d-flex flex-column">
-                <router-link to="/home" class="nav-link">
+                <router-link to="/" class="nav-link">
                   The Covid-19
                   <br />
                   Colombia Project
@@ -32,7 +32,7 @@
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span class="navbar-toggler-icon fa fa-align-justify"></span>
           </button>
 
           <div
@@ -40,7 +40,7 @@
             id="navBarMobile"
           >
             <ul class="navbar-nav">
-              <li class="nav-item" v-on:click="dropmenu">
+              <li class="nav-item" v-on:click="clickMenu">
                 <router-link
                   to="/"
                   href="#"
@@ -50,7 +50,7 @@
                   Home
                 </router-link>
               </li>
-              <li class="nav-item" v-on:click="dropmenu">
+              <li class="nav-item" v-on:click="clickMenu">
                 <router-link
                   to="/about"
                   href="#"
@@ -60,12 +60,11 @@
                   About Us
                 </router-link>
               </li>
-              <li class="nav-item" v-on:click="dropmenu">
+              <li class="nav-item" v-on:click="clickMenu">
                 <router-link
                   to="/team"
                   href="#"
                   class="nav-link font-weight-bold"
-                  @onclick="dropmenu()"
                   exact
                 >
                   Who is our team?
@@ -86,7 +85,7 @@
                 <div
                   class="dropdown-menu"
                   aria-labelledby="navbarDropdown"
-                  v-on:click="dropmenu"
+                  v-on:click="clickMenu"
                 >
                   <a class="dropdown-item" href="#">
                     Novel Coronavirus (2019-nCoV) Data Repository
@@ -111,7 +110,7 @@
                   </router-link>
                 </div>
               </li>
-              <li class="nav-item" v-on:click="dropmenu">
+              <li class="nav-item" v-on:click="clickMenu">
                 <router-link
                   to="/contribution"
                   href="#"
@@ -133,7 +132,7 @@
 export default {
   name: "NavBar",
   methods: {
-    dropmenu() {
+    clickMenu() {
       /*
       var URLactual = window.location;
       console.log("URLactual: " + URLactual);
@@ -153,6 +152,7 @@ export default {
       } else {
         window.$("#navbarDropdown").removeClass("active-secondary");
       }
+      window.$("#navBarMobile").collapse("hide");
     }
   }
 };

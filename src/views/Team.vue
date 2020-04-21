@@ -1,5 +1,5 @@
 <template>
-  <section class="spacer-double-lg">
+  <section class="spacer-double-lg none-v">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -8,7 +8,12 @@
               Who is our team?
             </h2>
             <p class="lead">
-              We want to thank all those organizations and professionals who helped with <strong class="font-weight-bold">The COVID-19 Colombia Project</strong>.
+              We want to thank all those organizations and professionals who
+              helped with
+              <strong class="font-weight-bold">
+                The COVID-19 Colombia Project
+              </strong>
+              .
             </p>
             <p class="lead">
               Their names and contact address are listed below.
@@ -52,6 +57,14 @@ export default {
     User01,
     User02,
     User03
+  },
+  mounted() {
+    this.loader();
+  },
+  methods: {
+    loader: () => {
+      window.$("section").fadeIn();
+    }
   }
 };
 </script>
@@ -69,7 +82,7 @@ export default {
   bottom: 0;
   left: 0;
 }
-.edge-shape-bottom>* {
+.edge-shape-bottom > * {
   -webkit-transform-origin: top center;
   transform-origin: top center;
 }

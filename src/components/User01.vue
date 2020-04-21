@@ -18,8 +18,8 @@
       </h2>
       <p>
         Aliquam elit neque, lacinia placerat efficitur vitae, aliquam a augue.
-        Maecenas nec nibh et tortor commodo convallis et sed lacus.
-        Etiam metus libero, vulputate non sodales eget, luctus eu ligula.
+        Maecenas nec nibh et tortor commodo convallis et sed lacus. Etiam metus
+        libero, vulputate non sodales eget, luctus eu ligula.
       </p>
     </div>
   </article>

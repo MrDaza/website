@@ -1,5 +1,5 @@
 <template>
-  <section class="spacer-double-lg">
+  <section class="spacer-double-lg none-v">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -221,13 +221,17 @@
 
 <script>
 export default {
+  name: "Proposes",
   mounted() {
     this.clickCollapse();
+    this.loader();
   },
-  name: "Proposes",
   methods: {
     clickCollapse() {
       window.$(".collapse").collapse();
+    },
+    loader: () => {
+      window.$("section").fadeIn();
     }
   }
 };

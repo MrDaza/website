@@ -1,64 +1,36 @@
 <template>
   <div>
-    <section class="bg-primary mt-n spacer-double-lg mt-5">
+    <section class="bg-primary spacer-double-lg mt-5 none-v">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col">
-            <div class="mb-5 pb-5 text-center mt-1">
-              <h2 class="display-4 text-white font-weight-bold">
+        <div class="row">
+          <div class="col text-center">
+            <h2 class="display-4 text-white font-weight-bold">
+              COVID-19 Colombia Project
+            </h2>
+            <br />
+            <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
+              The
+              <strong class="font-weight-bold">
                 COVID-19 Colombia Project
-              </h2>
-              <br />
-              <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
-                The
-                <strong class="font-weight-bold">
-                  COVID-19 Colombia Project
-                </strong>
-                collects and publishes the complete epidemiologic indicators and
-                case data available for
-                <strong class="font-weight-bold">Colombia</strong>
-                <i> departments, municipalities, and cities</i>. Besides,it is a
-                space to show ideas or applications that help cope with the
-                pandemic.
-              </p>
-              <br />
-              <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
-                This website is a resource to help advance the understanding of
-                the virus and inform the public, in order to save lives by
-                making better decisions through monitoring the outbreak.
-              </p>
-            </div>
+              </strong>
+              collects and publishes the complete epidemiologic indicators and
+              case data available for
+              <strong class="font-weight-bold">Colombia</strong>
+              <i> departments, municipalities, and cities</i>. Besides,it is a
+              space to show ideas or applications that help cope with the
+              pandemic.
+            </p>
+            <br />
+            <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
+              This website is a resource to help advance the understanding of
+              the virus and inform the public, in order to save lives by making
+              better decisions through monitoring the outbreak.
+            </p>
           </div>
         </div>
-        <!--
-        <div class="row text-center">
-          <div class="col">
-            <button type="button" class="btn font-weight-400 font-size-16 btn-secondary btn-radius-bottom-left text-left mb-2 mb-sm-0 mr-1">
-              <span class="media align-items-center mn-top">
-                <span class="fab fa-apple font-size-24 mr-3"></span>
-                <span class="media-body">
-                  <span class="d-block">Get it on</span>
-                  <strong class="font-size-15 mn-top">Mapa Web</strong>
-                </span>
-              </span>
-            </button>
-            <button type="button" class="btn font-weight-400 font-size-16 btn-light btn-radius-bottom-right text-left mb-2 mb-sm-0 ml-1">
-              <span class="media align-items-center mn-top">
-                <span class="fab fa-google-play font-size-24 mr-3"></span>
-                <span class="media-body">
-                  <span class="d-block">Get it on</span>
-                  <strong class="font-size-15 mn-top">Mapa App</strong>
-                </span>
-              </span>
-            </button>
-          </div>
-        </div>
-        -->
       </div>
     </section>
-    <div
-      class="curved-shape-container position-relative mt-1 d-none d-md-block"
-    >
+    <div class="curved-shape-container position-relative mt-1 d-none d-block">
       <div class="curved-shape">
         <svg
           version="1.1"
@@ -94,6 +66,14 @@ export default {
   name: "Home",
   components: {
     Gratefulness
+  },
+  mounted() {
+    this.loader();
+  },
+  methods: {
+    loader: () => {
+      window.$("section").fadeIn();
+    }
   }
 };
 </script>

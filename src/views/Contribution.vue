@@ -1,5 +1,5 @@
 <template>
-  <section class="spacer-double-lg mt-5">
+  <section class="spacer-double-lg mt-5 none-v">
     <div class="bg-checkerboard d-none d-md-block mt-5"></div>
     <div class="container">
       <div class="row">
@@ -132,7 +132,15 @@
 
 <script>
 export default {
-  name: "Contribution"
+  name: "Contribution",
+  mounted() {
+    this.loader();
+  },
+  methods: {
+    loader: () => {
+      window.$("section").fadeIn();
+    }
+  }
 };
 </script>
 <style lang="scss">
