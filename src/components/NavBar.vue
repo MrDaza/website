@@ -167,7 +167,10 @@ export default {
       console.log("pathname: " + pathname);
       if (
         pathname == "/proposes" ||
-        pathname == "/proposes/novel_coronavirus"
+        pathname == "/proposes/novel_coronavirus" ||
+        pathname == "/proposes/app_covid19" ||
+        pathname == "/proposes/novel_causal_analysis" ||
+        pathname == "/proposes/visual_dashboard"
       ) {
         window.$("#navbarDropdown").addClass("active-secondary");
       } else {
