@@ -1,5 +1,5 @@
 <template>
-  <section class="spacer-double-lg none-v">
+  <section class="team spacer-double-lg mt-5 mt-sm-0 none-v">
     <div class="container">
       <div class="row">
         <div class="col">
@@ -21,14 +21,14 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 col-lg-4 mb-1 mb-lg-0">
+      <div class="row justify-content-md-center">
+        <div class="col col-6 col-sm-3 col-md-3 col-lg-3 mb-1">
           <User01></User01>
         </div>
-        <div class="col-md-6 col-lg-4 mb-1 mb-lg-0">
+        <div class="col col-6 col-sm-3 col-md-3 col-lg-3 mb-1">
           <User02></User02>
         </div>
-        <div class="col-md-6 col-lg-4 mb-1 mb-lg-0">
+        <div class="col col-6 col-sm-3 col-md-3 col-lg-3 mb-1">
           <User03></User03>
         </div>
       </div>

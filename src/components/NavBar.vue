@@ -88,13 +88,15 @@
                   v-on:click="clickMenu"
                 >
                   <a class="dropdown-item" href="#">
-                    Novel Coronavirus (2019-nCoV) Data Repository
+                    <span>Novel Coronavirus (2019-nCoV) </span>
+                    <span class="d-none d-sm-inline">Data Repository</span>
                   </a>
                   <a class="dropdown-item" href="#">
                     App Covid19 Colombia
                   </a>
                   <a class="dropdown-item" href="#">
-                    A novel causal analysis of Colombia COVID-19 deaths
+                    <span>A novel causal analysis of Colombia </span>
+                    <span class="d-none d-sm-inline">COVID-19 deaths</span>
                   </a>
                   <a class="dropdown-item" href="#">
                     COVID-19 Colombia Visual Dashboard
