@@ -87,20 +87,36 @@
                   aria-labelledby="navbarDropdown"
                   v-on:click="clickMenu"
                 >
-                  <a class="dropdown-item" href="#">
+                  <router-link
+                    to="/proposes/novel_coronavirus"
+                    class="dropdown-item"
+                    href="#"
+                  >
                     <span>Novel Coronavirus (2019-nCoV) </span>
                     <span class="d-none d-sm-inline">Data Repository</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
+                  </router-link>
+                  <router-link
+                    to="/proposes/app_covid19"
+                    class="dropdown-item"
+                    href="#"
+                  >
                     App Covid19 Colombia
-                  </a>
-                  <a class="dropdown-item" href="#">
+                  </router-link>
+                  <router-link
+                    to="/proposes/novel_causal_analysis"
+                    class="dropdown-item"
+                    href="#"
+                  >
                     <span>A novel causal analysis of Colombia </span>
                     <span class="d-none d-sm-inline">COVID-19 deaths</span>
-                  </a>
-                  <a class="dropdown-item" href="#">
+                  </router-link>
+                  <router-link
+                    to="/proposes/visual_dashboard"
+                    class="dropdown-item"
+                    href="#"
+                  >
                     COVID-19 Colombia Visual Dashboard
-                  </a>
+                  </router-link>
                   <div class="dropdown-divider"></div>
                   <router-link
                     to="/proposes"
@@ -149,7 +165,10 @@ export default {
       */
       var pathname = window.location.pathname;
       console.log("pathname: " + pathname);
-      if (pathname == "/proposes") {
+      if (
+        pathname == "/proposes" ||
+        pathname == "/proposes/novel_coronavirus"
+      ) {
         window.$("#navbarDropdown").addClass("active-secondary");
       } else {
         window.$("#navbarDropdown").removeClass("active-secondary");
