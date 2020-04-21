@@ -15,11 +15,11 @@
                 />
               </router-link>
               <div class="d-flex flex-column">
-                <router-link to="/" class="nav-link">
+                <a href="/" class="nav-link font-weight-bold">
                   The Covid-19
                   <br />
                   Colombia Project
-                </router-link>
+                </a>
               </div>
             </div>
           </a>

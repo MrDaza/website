@@ -17,5 +17,5 @@
 <script>
 export default {
   name: "GoToGithub"
-}
+};
 </script>

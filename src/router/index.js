@@ -1,6 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
+import NotFound from "@/views/NotFound.vue";
 import Home from "@/views/Home.vue";
 import About from "@/views/About.vue";
 import Team from "@/views/Team.vue";
@@ -16,6 +17,14 @@ import Contribution from "@/views/Contribution.vue";
 Vue.use(VueRouter);
 
 const routes = [
+  {
+    path: "/404",
+    component: NotFound
+  },
+  {
+    path: "*",
+    redirect: "/404"
+  },
   {
     path: "/",
     name: "Home",
