@@ -5,7 +5,7 @@
         <div class="col">
           <div class="mt-1">
             <h2 class="display-4 text-center text-primary font-weight-bold">
-              Who is our team?
+              Our Team
             </h2>
             <p class="lead">
               We want to thank all those organizations and professionals who

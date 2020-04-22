@@ -16,7 +16,7 @@
               collects and publishes the complete epidemiologic indicators and
               case data available for
               <strong class="font-weight-bold">Colombia</strong>
-              <i> departments, municipalities, and cities</i>. Besides,it is a
+              <i> departments, municipalities, and cities</i>. Besides, it is a
               space to show ideas or applications that help cope with the
               pandemic.
             </p>
@@ -57,6 +57,8 @@
       </div>
     </div>
     <Gratefulness></Gratefulness>
+    <section>
+    </section>
   </div>
 </template>
 

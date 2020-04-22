@@ -9,6 +9,7 @@
             <li class="m-3 py-sm-3">
               <h5 class="h5 text-primary font-weight-bold">Gratefulness</h5>
             </li>
+            <!--
             <li class="mb-3 m-sm-3">
               <img
                 class="icon-logo-svg"
@@ -23,17 +24,18 @@
                 alt=""
               />
             </li>
+            -->
             <li class="mb-3 m-sm-3">
               <img
                 class="icon-logo-svg"
-                src="@/assets/images/logo/uninorte.jpg"
+                src="@/assets/images/logo/konrad_lorenz.png"
                 alt=""
               />
             </li>
             <li class="mb-3 m-sm-3">
               <img
                 class="icon-logo-svg"
-                src="@/assets/images/logo/konrad_lorenz.png"
+                src="@/assets/images/logo/uninorte.jpg"
                 alt=""
               />
             </li>

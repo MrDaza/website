@@ -40,7 +40,7 @@
             id="navBarMobile"
           >
             <ul class="navbar-nav">
-              <li class="nav-item" v-on:click="clickMenu">
+              <li class="nav-item">
                 <router-link
                   to="/"
                   href="#"
@@ -50,7 +50,17 @@
                   Home
                 </router-link>
               </li>
-              <li class="nav-item" v-on:click="clickMenu">
+              <li class="nav-item">
+                <router-link
+                  to="/notices"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  exact
+                >
+                  Notices
+                </router-link>
+              </li>
+              <li class="nav-item">
                 <router-link
                   to="/about"
                   href="#"
@@ -60,75 +70,27 @@
                   About Us
                 </router-link>
               </li>
-              <li class="nav-item" v-on:click="clickMenu">
+              <li class="nav-item">
                 <router-link
                   to="/team"
                   href="#"
                   class="nav-link font-weight-bold"
                   exact
                 >
-                  Who is our team?
+                  Our team
                 </router-link>
               </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle font-weight-bold"
-                  href="/proposes"
-                  id="navbarDropdown"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
+              <li class="nav-item">
+                <router-link
+                  to="/proposes"
+                  href="#"
+                  class="nav-link font-weight-bold"
+                  exact
                 >
                   Our Proposes
-                </a>
-                <div
-                  class="dropdown-menu"
-                  aria-labelledby="navbarDropdown"
-                  v-on:click="clickMenu"
-                >
-                  <router-link
-                    to="/proposes/novel_coronavirus"
-                    class="dropdown-item"
-                    href="#"
-                  >
-                    <span>Novel Coronavirus (2019-nCoV) </span>
-                    <span class="d-none d-sm-inline">Data Repository</span>
-                  </router-link>
-                  <router-link
-                    to="/proposes/app_covid19"
-                    class="dropdown-item"
-                    href="#"
-                  >
-                    App Covid19 Colombia
-                  </router-link>
-                  <router-link
-                    to="/proposes/novel_causal_analysis"
-                    class="dropdown-item"
-                    href="#"
-                  >
-                    <span>A novel causal analysis of Colombia </span>
-                    <span class="d-none d-sm-inline">COVID-19 deaths</span>
-                  </router-link>
-                  <router-link
-                    to="/proposes/visual_dashboard"
-                    class="dropdown-item"
-                    href="#"
-                  >
-                    COVID-19 Colombia Visual Dashboard
-                  </router-link>
-                  <div class="dropdown-divider"></div>
-                  <router-link
-                    to="/proposes"
-                    href="#"
-                    class="dropdown-item"
-                    exact
-                  >
-                    Our Proposes
-                  </router-link>
-                </div>
+                </router-link>
               </li>
-              <li class="nav-item" v-on:click="clickMenu">
+              <li class="nav-item">
                 <router-link
                   to="/contribution"
                   href="#"

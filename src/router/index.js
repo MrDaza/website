@@ -3,6 +3,7 @@ import VueRouter from "vue-router";
 
 import NotFound from "@/views/NotFound.vue";
 import Home from "@/views/Home.vue";
+import Notices from "@/views/Notices.vue";
 import About from "@/views/About.vue";
 import Team from "@/views/Team.vue";
 
@@ -29,6 +30,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/notices",
+    name: "Notices",
+    component: Notices
   },
   {
     path: "/about",

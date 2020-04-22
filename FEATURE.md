@@ -18,8 +18,8 @@ Los **Bug** Trabajos son los siquientes:
 - [x] ***013 🐞***: **(Our Proposes)** Agregar el documento del Repositorio. ✅
 - [ ] ***014 🐞***: **(Home)** Diseño de Noticias en el Home. 🟥
 - [ ] ***014 🐞***: **(Home)** Quitar la WHO y MinSalud, Poner Konrad y UniNorte. 🟥
-- [ ] ***015 🐞***: **(Our Proposes)** Eliminar los Link del Menu y Agregar Botones en las descrisción. 🟥
-- [ ] ***016 🐞***: **(Who is our Team?)** por **(Our Team?)**. 🟥
+- [x] ***015 🐞***: **(Menu)** Eliminar los Link del Menu y Agregar Botones en las descrisción. ✅
+- [ ] ***016 🐞***: **(Who is our Team?)** por **(Our Team?)**. ✅
 - [ ] ***017 🐞***: **(Our Team?)** Agregar Un Nuevo Participante, La Esposa de Juan Pablo. 🟥
 - [ ] ***018 🐞***: **(Our Team?)** Quitar los enlaces de los que no pongan nada. 🟥
 - [ ] ***019 🐞***: **(How to Contribution)** Agregar un Formulario de Contactenos. 🟥
