@@ -23,7 +23,7 @@ const routes = [
   },
   {
     path: "*",
-    redirect: "/404"
+    redirect: "/"
   },
   {
     path: "/",
@@ -63,10 +63,7 @@ const routes = [
   {
     path: "/proposes",
     name: "Proposes",
-    component: Proposes,
-    meta: {
-      requiresAuth: false
-    }
+    component: Proposes
   },
   {
     path: "/contribution",
@@ -83,6 +80,7 @@ const router = new VueRouter({
   linkExactActiveClass: ""
 });
 
+/*
 router.beforeEach((to, from, next) => {
   //https://router.vuejs.org/guide/advanced/meta.html
   let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
@@ -94,5 +92,5 @@ router.beforeEach((to, from, next) => {
     next();
   }
 });
-
+*/
 export default router;

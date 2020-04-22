@@ -1,3 +1,17 @@
+module.exports = {
+  context: __dirname,
+  devServer: {
+    historyApiFallback: true,
+    noInfo: true,
+    overlay: true
+  },
+  performance: {
+    hints: false
+  },
+  devtool: "#eval-source-map"
+};
+
+/*
 var path = require("path");
 var webpack = require("webpack");
 
@@ -88,3 +102,4 @@ if (process.env.NODE_ENV === "production") {
     })
   ]);
 }
+*/
