@@ -1,17 +1,15 @@
 <template>
   <a class="" href="#">
-    <div class="card-new card border-0 radius-bottom-right shadow-soft h-100">
+    <div class="ani-up card border-0 radius-bottom-right shadow-soft h-100">
       <div class="card-body p-4">
         <h4 class="h4 list-inline text-warning">
           {{ obj.title }}
         </h4>
         <p class="mb-5 pb-3 text-gray font-weight-200">
           {{
-            (
-              obj.desc.trim().length > 125
-            )?
-              obj.desc.trim().substring(0, 120) + " ...":
-              obj.desc.trim()
+            obj.desc.trim().length > 125
+              ? obj.desc.trim().substring(0, 120) + " ..."
+              : obj.desc.trim()
           }}
         </p>
       </div>

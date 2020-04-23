@@ -37,7 +37,7 @@
             href="https://twitter.com/CovidDataPROJ"
             target="_blank"
           >
-            <span class="fab fa-twitter "></span>
+            <span class="fab fa-twitter"></span>
           </a>
         </div>
         <div class="col-2">

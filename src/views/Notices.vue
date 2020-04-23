@@ -34,38 +34,42 @@ export default {
       news: [
         {
           title: "Lorem ipsum dolor sit 01",
-          desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
+          desc:
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
           picture: null,
           user: "Julio Mario D",
-          user_picture: "juliomariodaza.jpeg"
+          user_picture: "julio_mario_daza.jpeg"
         },
         {
           title: "Lorem ipsum dolor sit 02",
-          desc: "Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
+          desc:
+            "Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
           picture: null,
           user: "Elis Daza E",
-          user_picture: "elisdazaescorcia.jpeg"
+          user_picture: "elis_daza_escorcia.jpeg"
         },
         {
           title: "Lorem ipsum dolor sit 03",
-          desc: "Sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
+          desc:
+            "Sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
           picture: null,
           user: "Juan Pablo E",
-          user_picture: "juanpabloescorcia.jpeg"
+          user_picture: "juan_pablo_escorcia.jpeg"
         },
         {
           title: "Lorem ipsum dolor sit 04",
           desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
           picture: null,
           user: "Juan Pablo E",
-          user_picture: "juanpabloescorcia.jpeg"
+          user_picture: "juan_pablo_escorcia.jpeg"
         },
         {
           title: "Lorem ipsum dolor sit 05",
-          desc: "Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
+          desc:
+            "Aspernatur ducimus esse totam odit, eum illo nemo, sint dolor cumque rem placeat commodi molestias explicabo! Ab nihil nisi sunt consequatur doloremque!",
           picture: null,
           user: "Elis Daza E",
-          user_picture: "elisdazaescorcia.jpeg"
+          user_picture: "elis_daza_escorcia.jpeg"
         }
       ]
     };
@@ -80,7 +84,6 @@ export default {
   }
 };
 </script>
-
 <style lang="scss">
 /* Pulse Shrink */
 @-webkit-keyframes pulse-shrink {
@@ -96,14 +99,14 @@ export default {
   }
 }
 /*
-.card-new {
+.ani-up {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
-.card-new:hover, .card-new:focus, .card-new:active {
+.ani-up:hover, .ani-up:focus, .ani-up:active {
   -webkit-animation-name: pulse-shrink;
   animation-name: pulse-shrink;
   -webkit-animation-duration: 0.3s;
@@ -116,7 +119,7 @@ export default {
   animation-direction: alternate;
 }
 */
-.card-new {
+.ani-up {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
@@ -127,9 +130,9 @@ export default {
   -webkit-transition-property: transform;
   transition-property: transform;
 }
-.card-new:hover,
-.card-new:focus,
-.card-new:active {
+.ani-up:hover,
+.ani-up:focus,
+.ani-up:active {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }

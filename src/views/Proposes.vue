@@ -1,5 +1,6 @@
 <template>
   <section class="proposes spacer-double-lg mt-5 mt-sm-0 none-v">
+    <div class="bg-aboutboard d-block mt-md-5 mt-0"></div>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -120,5 +121,37 @@ export default {
 .card-collapse [data-toggle="collapse"][aria-expanded="true"],
 .card-collapse [data-toggle="collapse"][aria-expanded="true"] .accordion-arrow {
   color: #00c9a7;
+}
+
+@media (min-width: 769px) {
+  .bg-aboutboard {
+    background-image: url(~@/assets/images/aboutboard.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    left: 0;
+  }
+}
+@media (max-width: 768px) {
+  .bg-aboutboard {
+    background-image: url(~@/assets/images/mobile_aboutboard.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: auto;
+    left: 0;
+  }
+}
+
+.icon-check {
+  width: 1rem;
+  height: auto;
 }
 </style>
