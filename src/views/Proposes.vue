@@ -29,10 +29,9 @@
       </div>
       <div class="row justify-content-center">
         <div id="accordion" class="col-lg-10">
-          <Proposes01></Proposes01>
-          <Proposes02></Proposes02>
-          <Proposes03></Proposes03>
-          <Proposes04></Proposes04>
+          <div v-for="(propositi, index) in proposition" :key="index">
+            <Pose v-bind:obj="propositi" />
+          </div>
         </div>
       </div>
 
@@ -54,17 +53,82 @@
 </template>
 
 <script>
-import Proposes01 from "@/components/Proposes01";
-import Proposes02 from "@/components/Proposes02";
-import Proposes03 from "@/components/Proposes03";
-import Proposes04 from "@/components/Proposes04";
+//import Proposes01 from "@/components/Proposes01";
+//import Proposes02 from "@/components/Proposes02";
+//import Proposes03 from "@/components/Proposes03";
+//import Proposes04 from "@/components/Proposes04";
+import Pose from "@/components/Proposes";
 export default {
   name: "Proposes",
   components: {
-    Proposes01,
-    Proposes02,
-    Proposes03,
-    Proposes04
+    Pose
+  },
+  data() {
+    return {
+      proposition: [
+        {
+          code: "One",
+          title: "Novel Coronavirus (2019-nCoV) Data Repository",
+          created: "Developed by Julio Mario Daza, and Elis Daza Escorcia.",
+          desc:
+            "Data repository for the 2019 Novel Coronavirus (formerly known as 2019-nCoV infection or simply COVID-19). The main objective of this repository is to facilitate access to COVID-19 data in Colombia to bring a more comprehensive picture of the current situation.",
+          lear_more_to: "/proposes/novel_coronavirus",
+          links_alt: [
+            {
+              title: "github",
+              icon: "fa github",
+              url: "https://github.com/coviddataproject"
+            }
+          ]
+        },
+        {
+          code: "Two",
+          title: "App Covid19 Colombia",
+          created: "Developed by Elis Daza Escorcia.",
+          desc:
+            "Movil applications to aid in outbreak expansion time and help to that people get informed out about COVID-19 and know what to do in case of symptoms. Download in Google Play",
+          lear_more_to: "/proposes/app_covid19",
+          links_alt: [
+            {
+              title: "github",
+              icon: "fa github",
+              url: "https://github.com/coviddataproject"
+            }
+          ]
+        },
+        {
+          code: "Three",
+          title: "Novel Coronavirus (2019-nCoV) Data Repository",
+          created:
+            "Developed by Juan Pablo Escorcia, Milton Soto, Odette Chams, and Julio Mario Daza.",
+          desc:
+            "Data repository for the coronavirus. This repository contains a causal analysis and epidemiologic indicators. \n The main objective is to determine the causal analysis of deaths from COVID-19 in Colombia and to bring a more comprehensive picture of the current situation.",
+          lear_more_to: "/proposes/novel_causal_analysis",
+          links_alt: [
+            {
+              title: "github",
+              icon: "fa github",
+              url: "https://github.com/coviddataproject"
+            }
+          ]
+        },
+        {
+          code: "Four",
+          title: "COVID-19 Colombia Visual Dashboard",
+          created: "Developed by Julio Mario Daza",
+          desc:
+            "Visual Dashboard for the 2019 Novel Coronavirus (formerly known as 2019-nCoV infection or simply COVID-19).\n The main objective of this Dashboard is to facilitate access to COVID-19 data in Colombia to bring a more comprehensive picture of the current situation in all departments, municipals, and cities",
+          lear_more_to: "/proposes/visual_dashboard",
+          links_alt: [
+            {
+              title: "GitHub Watch",
+              icon: "fa github",
+              url: "https://github.com/coviddataproject"
+            }
+          ]
+        }
+      ]
+    };
   },
   mounted() {
     this.clickCollapse();
@@ -121,33 +185,6 @@ export default {
 .card-collapse [data-toggle="collapse"][aria-expanded="true"],
 .card-collapse [data-toggle="collapse"][aria-expanded="true"] .accordion-arrow {
   color: #00c9a7;
-}
-
-@media (min-width: 769px) {
-  .bg-aboutboard {
-    background-image: url(~@/assets/images/aboutboard.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: auto;
-    left: 0;
-  }
-}
-@media (max-width: 768px) {
-  .bg-aboutboard {
-    background-image: url(~@/assets/images/mobile_aboutboard.png);
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: auto;
-    left: 0;
-  }
 }
 
 .icon-check {

@@ -31,6 +31,9 @@ $secondary: $color-secondary !default;
 .active-secondary {
   color: $secondary !important;
 }
+.active {
+  color: $primary !important;
+}
 
 .navbar-nav .nav-link:hover {
   color: $secondary !important;

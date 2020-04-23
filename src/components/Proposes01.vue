@@ -10,7 +10,8 @@
           aria-controls="collapseOne"
         >
           <span class="text-left">
-            Novel Coronavirus (2019-nCoV) <br class="d-sm-none" />Data Repository
+            Novel Coronavirus (2019-nCoV) <br class="d-sm-none" />
+            Data Repository
           </span>
           <span class="accordion-arrow">
             <span class="fa fa-angle-down accordion-arrow-inner"></span>

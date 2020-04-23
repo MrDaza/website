@@ -82,7 +82,7 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes,
-  linkActiveClass: "active-secondary",
+  linkActiveClass: "text-secondary",
   linkExactActiveClass: ""
 });
 
