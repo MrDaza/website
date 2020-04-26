@@ -24,6 +24,7 @@
     <div class="wrapper">
       <NavBar></NavBar>
       <router-view />
+      <div class="col-12" style="height:50px"></div>
       <Footer></Footer>
     </div>
   </div>
@@ -45,9 +46,12 @@ export default {
     loader: () => {
       window.$(window).on("load", function() {
         window.$(".loader-inner").fadeOut();
-        window.$(".loader").delay(200).fadeOut("slow");
+        window
+          .$(".loader")
+          .delay(200)
+          .fadeOut("slow");
       });
     }
   }
-}
+};
 </script>

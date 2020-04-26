@@ -2,9 +2,8 @@ import Vue from "vue";
 import App from "./App.vue";
 import router from "./router";
 
-import jQuery from "jquery";
-window.$ = window.jQuery = jQuery;
-
+import $ from "jquery";
+window.$ = window.jQuery = $;
 import "popper.js";
 import "bootstrap";
 //Components
