@@ -1,5 +1,5 @@
 <template>
-  <div class="card border-0 shadow-soft p-2 bg-primary h-100">
+  <div class="card border-0 p-2 bg-white text-primary h-100">
     <div class="row text-center p-sm-3">
       <div class="col-6 col-sm-6">
         <div class="d-flex justify-content-center">
@@ -10,7 +10,7 @@
           </span>
         </div>
         <h5 class="h5 font-weight-bold">Address</h5>
-        <a class="text-white-70 font-size-15" href="#">
+        <a class="text-primary-70 font-size-15" href="#">
           Bogotá, Colombia
         </a>
       </div>
@@ -23,10 +23,11 @@
           </span>
         </div>
         <h5 class="h5 font-weight-bold">Phone Number</h5>
-        <a class="text-white-70 font-size-15" href="#">
+        <a class="text-primary-70 font-size-15" href="#">
           (057) 310 6352773
         </a>
       </div>
+      <!--
       <div class="col-sm-12 mb-3">
         <div class="d-flex justify-content-center">
           <span
@@ -40,7 +41,8 @@
           CovidDataProject@gmail.com
         </a>
       </div>
-      <div class="col-sm-12">
+      -->
+      <div class="col-sm-12 mt-4">
         <div class="d-flex justify-content-center">
           <a
             class="mr-2"

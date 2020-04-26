@@ -4,7 +4,7 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="mb-sm-5 pb-sm-5 mt-1">
+          <div class="col-12 mt-1">
             <h2 class="display-4 text-center text-primary font-weight-bold">
               How to Contribution
             </h2>
@@ -20,11 +20,17 @@
               Moreover, thank you, from all of us on the project, for caring
               about this work.
             </p>
+            <Info class="d-none d-sm-block" />
           </div>
         </div>
         <div class="col text-white">
-          <Info></Info>
+          <div class="card border-0 shadow-soft p-2 bg-primary">
+            <div class="row text-center p-sm-3">
+              <FormInfo />
+            </div>
+          </div>
         </div>
+        <Info class="d-sm-none" />
       </div>
     </div>
   </section>
@@ -32,10 +38,12 @@
 
 <script>
 import Info from "@/components/Info";
+import FormInfo from "@/components/FormInfo";
 export default {
   name: "Contribution",
   components: {
-    Info
+    Info,
+    FormInfo
   },
   mounted() {
     this.loader();

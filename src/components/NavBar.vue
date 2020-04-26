@@ -79,7 +79,7 @@
                   class="nav-link font-weight-bold text-white"
                   exact
                 >
-                  Our team
+                  Our Team
                 </router-link>
               </li>
               <li class="nav-item" v-on:click="clickMenu">
