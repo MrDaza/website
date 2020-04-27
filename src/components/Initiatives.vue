@@ -53,7 +53,7 @@
               class="btn btn-sx btn-radius-bottom-right btn-secondary justify-content-end"
             >
               <span :class="link.icon"></span>
-              <span class="mn-top">{{ link.title }}</span>
+              <span class="ml-3">{{ link.title }}</span>
             </a>
           </div>
         </div>
@@ -64,7 +64,7 @@
 
 <script>
 export default {
-  name: "Proposes",
+  name: "Initiatives",
   props: {
     obj: Object
   }

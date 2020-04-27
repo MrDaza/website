@@ -22,10 +22,10 @@
       </div>
     </div>
     <div class="wrapper">
-      <NavBar></NavBar>
+      <NavBar />
       <router-view />
-      <div class="col-12" style="height:50px"></div>
-      <Footer></Footer>
+      <div class="col-12" style="height:40px"></div>
+      <Footer v-if="viewFooter" />
     </div>
   </div>
 </template>
@@ -39,8 +39,16 @@
 <script>
 export default {
   name: "App",
+  data() {
+    return {
+      viewFooter: true
+    };
+  },
   mounted() {
     this.loader();
+  },
+  updated() {
+    this.loaderFooter();
   },
   methods: {
     loader: () => {
@@ -51,6 +59,15 @@ export default {
           .delay(200)
           .fadeOut("slow");
       });
+    },
+    loaderFooter() {
+      var pathname = window.location.pathname;
+      console.log("pathname: " + pathname);
+      if (pathname == "/maps" || pathname == "/") {
+        this.viewFooter = false;
+      } else {
+        this.viewFooter = true;
+      }
     }
   }
 };

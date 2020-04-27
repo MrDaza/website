@@ -1,11 +1,11 @@
 <template>
-  <section class="proposes spacer-double-lg mt-5 mt-sm-0 none-v">
+  <section class="proposes my-5 pt-5 none-v">
     <div class="bg-aboutboard d-block mt-md-5 mt-0"></div>
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="mb-3 pb-3 text-center mt-1">
-            <h2 class="display-4 text-primary font-weight-bold">
+          <div class="my-4 pt-2">
+            <h2 class="display-4 text-center text-primary font-weight-bold">
               Our Proposes
             </h2>
             <p class="w-md-60 mx-auto mb-0 lead text-justify">
@@ -30,7 +30,7 @@
       <div class="row justify-content-center">
         <div id="accordion" class="col-lg-10">
           <div v-for="(propositi, index) in proposition" :key="index">
-            <Pose v-bind:obj="propositi" />
+            <Initiatives v-bind:obj="propositi" />
           </div>
         </div>
       </div>
@@ -57,11 +57,11 @@
 //import Proposes02 from "@/components/Proposes02";
 //import Proposes03 from "@/components/Proposes03";
 //import Proposes04 from "@/components/Proposes04";
-import Pose from "@/components/Proposes";
+import Initiatives from "@/components/Initiatives";
 export default {
   name: "Proposes",
   components: {
-    Pose
+    Initiatives
   },
   data() {
     return {
@@ -76,8 +76,8 @@ export default {
           links_alt: [
             {
               title: "github",
-              icon: "fa github",
-              url: "https://github.com/coviddataproject"
+              icon: "fab fa-github",
+              url: "https://github.com/CovidDataProject/DataCovid19Colombia"
             }
           ]
         },
@@ -91,14 +91,14 @@ export default {
           links_alt: [
             {
               title: "github",
-              icon: "fa github",
-              url: "https://github.com/coviddataproject"
+              icon: "fab fa-github",
+              url: "https://github.com/CovidDataProject/DataCovid19Colombia"
             }
           ]
         },
         {
           code: "Three",
-          title: "Novel Coronavirus (2019-nCoV) Data Repository",
+          title: "A novel causal analysis of Colombia COVID-19 deaths",
           created:
             "Developed by Juan Pablo Escorcia, Milton Soto, Odette Chams, and Julio Mario Daza.",
           desc:
@@ -107,7 +107,7 @@ export default {
           links_alt: [
             {
               title: "github",
-              icon: "fa github",
+              icon: "fab fa-github",
               url: "https://github.com/coviddataproject"
             }
           ]
@@ -122,8 +122,20 @@ export default {
           links_alt: [
             {
               title: "GitHub Watch",
-              icon: "fa github",
+              icon: "fab fa-github",
               url: "https://github.com/coviddataproject"
+            },
+            {
+              title: "Get it on Map Web",
+              icon: "fab fa fa-globe",
+              url:
+                "https://app.powerbi.com/view?r=eyJrIjoiYWUzNDgwYjQtNmYyYy00NWJlLWEwY2YtNjMxZDkzZGFmNDQ4IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
+            },
+            {
+              title: "Get it on Spanish Map Web",
+              icon: "fab fa fa-globe-americas",
+              url:
+                "https://app.powerbi.com/view?r=eyJrIjoiNzYzNmQ5YTUtYTdkYS00NGJlLWEzOWYtNDI2YmU2ZDQxNzU0IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
             }
           ]
         }
@@ -145,7 +157,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scope slot-scope>
 .accordion-header {
   padding: 0;
   background-color: transparent;

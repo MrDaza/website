@@ -3,9 +3,11 @@
     <div class="header-section">
       <div class="container ">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
-            <div class="d-inline-flex">
-              <router-link to="/" class="nav-link">
+          <div class="navbar-brand">
+            <div
+              class="d-inline-flex col-12 justify-content-center justify-content-sm-start"
+            >
+              <router-link to="/" class="nav-link ">
                 <img
                   src="@/assets/images/CovidDataProject_100x100.png"
                   width="60"
@@ -25,7 +27,7 @@
                 </a>
               </div>
               <button
-                class="navbar-toggler text-white"
+                class="navbar-toggler text-white text-right justify-content-end"
                 type="button"
                 data-toggle="collapse"
                 data-target="#navBarMobile"
@@ -36,7 +38,7 @@
                 <span class="navbar-toggler-icon fa fa-align-justify"></span>
               </button>
             </div>
-          </a>
+          </div>
           <div
             class="collapse navbar-collapse justify-content-end"
             id="navBarMobile"

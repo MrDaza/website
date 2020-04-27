@@ -18,7 +18,7 @@
         </div>
         <div class="col-12 col-sm-6 col-md-4 pt-0 pt-sm-3 text-center">
           <p class="font-size-14 mb-0">
-            <span class="text-build">Desarrollado con&nbsp;&nbsp;</span>
+            <span class="text-build">With by&nbsp;</span>
             <a href="https://mr.daza.com.co" target="_black">
               <span class="text-love">
                 &nbsp;❤️ MrDaza

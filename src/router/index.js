@@ -1,19 +1,20 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 
-import NotFound from "@/views/NotFound.vue";
-import Home from "@/views/Home.vue";
-import Notices from "@/views/Notices.vue";
-import About from "@/views/About.vue";
-import Team from "@/views/Team.vue";
+import NotFound from "@/views/NotFound";
+import Home from "@/views/Home";
+import Notices from "@/views/Notices";
+import About from "@/views/About";
+import Team from "@/views/Team";
+import Maps from "@/views/Maps";
 
-import Proposes from "@/views/Proposes.vue";
-import Article01 from "@/views/Article01.vue";
-import Article02 from "@/views/Article02.vue";
-import Article03 from "@/views/Article03.vue";
-import Article04 from "@/views/Article04.vue";
+import Proposes from "@/views/Proposes";
+import Article01 from "@/views/proposes/Article01";
+import Article02 from "@/views/proposes/Article02";
+import Article03 from "@/views/proposes/Article03";
+import Article04 from "@/views/proposes/Article04";
 
-import Contribution from "@/views/Contribution.vue";
+import Contribution from "@/views/Contribution";
 
 Vue.use(VueRouter);
 
@@ -30,6 +31,11 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home
+  },
+  {
+    path: "/maps",
+    name: "Maps",
+    component: Maps
   },
   {
     path: "/notices",
