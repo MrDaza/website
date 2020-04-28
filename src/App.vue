@@ -25,6 +25,7 @@
       <NavBar />
       <router-view />
       <div class="col-12 my-1"></div>
+      <div class="col-12" style="height:40px"></div>
       <Footer v-if="viewFooter" />
       <a class="scroll-to-top scroll" href="#" @click="upClick">
         <span class=" fas fa-arrow-up top-icon "></span>
@@ -76,7 +77,6 @@ export default {
     },
     loaderFooter() {
       var pathname = window.location.pathname;
-      console.log("pathname: " + pathname);
       if (pathname == "/maps" || pathname == "/") {
         this.viewFooter = false;
       } else {

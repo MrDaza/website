@@ -22,7 +22,6 @@
 export default {
   name: "Maps",
   mounted() {
-    console.log("mounted");
     this.loader();
   },
   methods: {

@@ -182,11 +182,12 @@ export default {
         {
           name: "Daniel Romero Rodriguez",
           picture: "daniel_romero.jpeg",
-          desc: "Analytics, Data Scientist",
+          desc: "Industrial Engineer",
           network: [
             {
               icon: "fab fa-linkedin",
-              href: "https://www.linkedin.com/in/daniel-romero-rodriguez-226bb213/"
+              href:
+                "https://www.linkedin.com/in/daniel-romero-rodriguez-226bb213/"
             },
             {
               icon: "fab fa-twitter",

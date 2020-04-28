@@ -14,6 +14,7 @@ Los **Bug** Trabajos son los siquientes:
 - [ ] ***033 🐞***: **(Sitio Web)** Validar la Carga en multiples sitios [everysize](https://everysize.kibalabs.com). 🟥
 - [ ] ***034 🐞***: **(Sitio Web)** Por que las URL no se pueden cargar. 🟥
 - [ ] ***035 🐞***: **(Sitio Web)** Diseño de 404. 🟥
+- [x] ***036 🐞***: **(Sitio Web)** Solucion de Warning. ✅
 
 
 ## Feature 0.0.3 - 🐞

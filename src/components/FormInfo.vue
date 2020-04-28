@@ -145,7 +145,6 @@ export default {
           "The name must contain more than 4 AND less than 50 characters";
         this.form.contact_name = this.form.contact_name.trim();
       } else {
-        console.log("name = " + this.form.contact_name.trim().length);
         this.errors.name.val = 1;
         this.errors.name.text = "!OK";
       }
@@ -159,7 +158,6 @@ export default {
         this.errors.email.text = "The email is not valid.";
         this.form.contact_email = this.form.contact_email.trim();
       } else {
-        console.log("email = " + this.form.contact_email.trim().length);
         this.errors.email.val = 1;
         this.errors.email.text = "0k!";
       }
@@ -180,7 +178,6 @@ export default {
           "The message must contain more than 20 AND less than 255 characters";
         this.form.contact_subject = this.form.contact_subject.trim();
       } else {
-        console.log("subject = " + this.form.contact_subject.trim().length);
         this.errors.subject.val = 1;
         this.errors.subject.text = "!OK";
       }
@@ -210,18 +207,14 @@ export default {
         .get(apiUrl)
         .then(request => {
           const html = request.data;
-          console.log(
-            "Status = " + html.status + " totalResult " + html.messages
-          );
           if (html.status == "ok") {
             this.loading = false;
           } else {
             this.error = true;
           }
-          //console.log(html);
         })
-        .catch(error => {
-          console.log("error:" + error);
+        .catch(() => {
+          //console.log("error:" + error);
           this.errored = true;
         })
         .finally(() => (this.loading = false));

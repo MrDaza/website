@@ -36,6 +36,20 @@ export default {
         {
           code: 1,
           title:
+            "Expertos evaluarán nueve variables para tomar decisiones sobre el aislamiento",
+          desc:
+            "El ministro de Salud y Protección Social, Fernando Ruiz Gómez, explicó esta noche en el programa Prevención y Acción con el presidente Iván Duque, las nueve variables para tomar decisiones relacionadas con el endurecimiento o la flexibilización del aislamiento obligatorio. ",
+          source: "Ministerio de Salud",
+          source_url: "www.minsalud.gov.co",
+          soruce_ico: null,
+          image:
+            "https://www.minsalud.gov.co/fotos_carrusel_2020/nuevas-variables.jpg",
+          url:
+            "https://www.minsalud.gov.co/Paginas/Expertos-evaluaran-nueve-variables-para-tomar-decisiones-sobre-el-aislamiento.aspx"
+        },
+        {
+          code: 1,
+          title:
             "This 3-D Simulation Shows Why Social Distancing Is So Important",
           desc:
             "We visualized a cough to show how far respiratory droplets can spread. If you haven’t been keeping your distance to fight the coronavirus, this may persuade you.",

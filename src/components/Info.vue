@@ -27,21 +27,6 @@
           (057) 310 6352773
         </a>
       </div>
-      <!--
-      <div class="col-sm-12 mb-3">
-        <div class="d-flex justify-content-center">
-          <span
-            class="btn rounded-icon-size-1 bg-soft-white rounded-circle m-3 d-block"
-          >
-            <span class="fas fa-envelope icon-rounded-inner"></span>
-          </span>
-        </div>
-        <h5 class="h5 font-weight-bold">General enquiries</h5>
-        <a class="text-white-70 font-size-15" href="#">
-          CovidDataProject@gmail.com
-        </a>
-      </div>
-      -->
       <div class="col-sm-12 mt-4">
         <div class="d-flex justify-content-center">
           <a
