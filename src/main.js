@@ -4,6 +4,7 @@ import router from "./router";
 
 import $ from "jquery";
 window.$ = window.jQuery = $;
+
 import "popper.js";
 import "bootstrap";
 //Components

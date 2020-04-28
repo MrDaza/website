@@ -2,7 +2,7 @@
   <footer class="pb-3 fixed-bottom bg-white">
     <div class="row">
       <div class="col">
-        <hr class="my-sm-6" />
+        <hr class="my-1" />
       </div>
     </div>
     <div class="container">

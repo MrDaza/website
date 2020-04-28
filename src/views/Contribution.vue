@@ -16,8 +16,8 @@
             what you would like to do in The COVID-19 Colombia Project team.
           </p>
           <p class="lead">
-            Moreover, thank you, from all of us on the project, for caring
-            about this work.
+            Moreover, thank you, from all of us on the project, for caring about
+            this work.
           </p>
           <Info class="d-none d-sm-block" />
         </div>

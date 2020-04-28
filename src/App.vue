@@ -24,8 +24,11 @@
     <div class="wrapper">
       <NavBar />
       <router-view />
-      <div class="col-12" style="height:40px"></div>
+      <div class="col-12 my-1"></div>
       <Footer v-if="viewFooter" />
+      <a class="scroll-to-top scroll" href="#" @click="upClick">
+        <span class=" fas fa-arrow-up top-icon "></span>
+      </a>
     </div>
   </div>
 </template>
@@ -37,6 +40,9 @@
 @import "@/assets/style/main.scss";
 </style>
 <script>
+import smoothScroll from "jquery-smooth-scroll";
+window.$ = smoothScroll;
+
 export default {
   name: "App",
   data() {
@@ -46,9 +52,12 @@ export default {
   },
   mounted() {
     this.loader();
+    this.loaderFooter();
+    this.scrollLink();
   },
   updated() {
     this.loaderFooter();
+    this.scrollLink();
   },
   methods: {
     loader: () => {
@@ -59,6 +68,11 @@ export default {
           .delay(200)
           .fadeOut("slow");
       });
+      window.$("a.scroll").smoothScroll({
+        speed: 800,
+        offset: -71,
+        scrollTarget: "#wrapper"
+      });
     },
     loaderFooter() {
       var pathname = window.location.pathname;
@@ -68,6 +82,18 @@ export default {
       } else {
         this.viewFooter = true;
       }
+    },
+    scrollLink() {
+      window.$(window).scroll(function() {
+        if (window.$(this).scrollTop() > 100) {
+          window.$(".scroll-to-top").addClass("active");
+        } else {
+          window.$(".scroll-to-top").removeClass("active");
+        }
+      });
+    },
+    upClick() {
+      window.$.smoothScroll("-=" + window.$(window).height());
     }
   }
 };
