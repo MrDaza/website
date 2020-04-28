@@ -10,11 +10,11 @@
           </div>
         </div>
       </div>
-      <div class="row">
+      <div class="row d-flex justify-content-center">
         <div
           v-for="(obj, index) in news"
           :key="index"
-          class="col-12 col-sm-6 col-md-4 col-lg-4 mb-3 mt-3"
+          class="col-11 col-sm-10 col-md-6 col-lg-4 col-lx-3 mb-3 mt-3 "
         >
           <News v-bind:obj="obj" />
         </div>
@@ -169,7 +169,6 @@ export default {
 };
 </script>
 <style lang="scss">
-/* Pulse Shrink */
 @-webkit-keyframes pulse-shrink {
   to {
     -webkit-transform: scale(0.9);

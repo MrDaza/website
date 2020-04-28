@@ -8,9 +8,9 @@
         :alt="obj.title"
       />
       <div class="card-body p-4">
-        <h4 class="h5 list-inline text-priamry font-weight-600">
+        <h5 class="h5 list-inline text-priamry font-weight-600">
           {{ obj.title }}
-        </h4>
+        </h5>
         <p class="mb-5 pb-3 text-gray font-weight-200">
           {{
             obj.desc.trim().length > 125
@@ -30,14 +30,6 @@
               :src="obj.source_ico"
               alt="Noticia"
             />
-            <!--
-            <img
-              v-if="obj.user_picture"
-              class="img-fluid rounded-circle"
-              v-bind:src="require('@/assets/images/users/' + obj.user_picture)"
-              alt="Noticia"
-            />
-            -->
             <img
               v-else
               class="img-fluid rounded-circle"

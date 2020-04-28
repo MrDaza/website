@@ -1,12 +1,12 @@
 <template>
   <div class="card border-0 p-2 bg-white text-primary h-100">
-    <div class="row text-center p-sm-3">
-      <div class="col-6 col-sm-6">
+    <div class="row text-center p-sm-3 d-flex justify-content-center">
+      <div class="col-6">
         <div class="d-flex justify-content-center">
           <span
             class="btn rounded-icon-size-1 bg-soft-white rounded-circle m-3 d-block"
           >
-            <span class="fas fa-map-marker-alt icon-rounded-inner"></span>
+            <span class="fa-map-marker-alt icon-rounded-inner"></span>
           </span>
         </div>
         <h5 class="h5 font-weight-bold">Address</h5>
@@ -14,7 +14,7 @@
           Bogotá, Colombia
         </a>
       </div>
-      <div class="col-6 col-sm-6">
+      <div class="col-6">
         <div class="d-flex justify-content-center">
           <span
             class="btn rounded-icon-size-1 bg-soft-white rounded-circle m-3 d-block"
@@ -27,7 +27,7 @@
           (057) 310 6352773
         </a>
       </div>
-      <div class="col-sm-12 mt-4">
+      <div class="col-12 mt-4">
         <div class="d-flex justify-content-center">
           <a
             class="mr-2"

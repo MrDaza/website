@@ -1,6 +1,5 @@
 <template>
   <section class="proposes my-5 pt-5 none-v">
-    <div class="bg-aboutboard d-block mt-md-5 mt-0"></div>
     <div class="container">
       <div class="row">
         <div class="col">
@@ -157,7 +156,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope slot-scope>
+<style lang="scss" scoped>
 .accordion-header {
   padding: 0;
   background-color: transparent;
@@ -197,10 +196,5 @@ export default {
 .card-collapse [data-toggle="collapse"][aria-expanded="true"],
 .card-collapse [data-toggle="collapse"][aria-expanded="true"] .accordion-arrow {
   color: #00c9a7;
-}
-
-.icon-check {
-  width: 1rem;
-  height: auto;
 }
 </style>

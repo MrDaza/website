@@ -233,7 +233,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scope>
+<style lang="scss" scoped>
 $color: #fff;
 .contact-form input {
   color: $color;

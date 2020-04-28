@@ -24,8 +24,7 @@
     <div class="wrapper">
       <NavBar />
       <router-view />
-      <div class="col-12 my-1"></div>
-      <div class="col-12" style="height:40px"></div>
+      <div class="col-12 my-4"></div>
       <Footer v-if="viewFooter" />
       <a class="scroll-to-top scroll" href="#" @click="upClick">
         <span class=" fas fa-arrow-up top-icon "></span>

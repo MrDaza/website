@@ -2,11 +2,16 @@
   <div>
     <section class="bg-primary mt-5 py-5 none-v">
       <div class="container">
-        <div class="row pt-5">
+        <div class="row pt-2 pt-sm-0 pt-md-0 pt-lg-5 ">
           <div class="col text-center">
-            <h1 class="display-3 text-white font-weight-bold">
+            <h1
+              class="display-3 text-white font-weight-bold d-none d-md-inline"
+            >
               COVID-19 Colombia Project
             </h1>
+            <h2 class="display-4 text-white font-weight-bold d-md-none">
+              COVID-19 <br />Colombia Project
+            </h2>
             <br />
             <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
               The
@@ -33,23 +38,21 @@
             <ul
               class="radius-bottom-right px-5 list-unstyled rounded text-center d-flex  mb-0 bg-dark  flex-wrap justify-content-center"
             >
-              <li class="my-4 mx-4 mx-lg-5 buzz-out-load">
-                <div
-                  class="h1 text-white mb-2 text-danger font-weight-bold hvr-buzz-out"
-                >
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
+                <div class="h1 mb-2 text-danger font-weight-bold hvr-buzz-out">
                   {{ datos.confirmed }}
                 </div>
                 <h6 class="mb-0 text-light">Total Confirmed</h6>
               </li>
-              <li class="my-4 mx-4 mx-lg-5 buzz-out-load">
-                <div class="h1 text-white mb-2 font-weight-bold hvr-buzz-out">
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
+                <div class="h1 mb-2 text-white font-weight-bold hvr-buzz-out">
                   {{ datos.deaths }}
                 </div>
                 <h6 class="mb-0 text-light">Total Deaths</h6>
               </li>
-              <li class="my-4 mx-4 mx-lg-5 buzz-out-load">
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
                 <div
-                  class="h1 text-white mb-2 text-secondary font-weight-bold hvr-buzz-out"
+                  class="h1 mb-2 text-secondary font-weight-bold hvr-buzz-out"
                 >
                   {{ datos.critical }}
                 </div>
@@ -58,13 +61,26 @@
             </ul>
           </div>
         </div>
-        <div class="row text-center my-5">
-          <div class="col">
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="w-75 mx-auto mt-4 text-center">
+              <p class="mb-0 text-white">
+                Last Updated at (DD/MM/YYYY)
+                <router-link to="/maps" href="#" class="hover-arrow text-info">
+                  {{ datos.time }}
+                  <span class="fa fa-arrow-right"></span>
+                </router-link>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="row d-flex justify-content-center text-center mt-5">
+          <div class="col col-sm-7 col-md-4">
             <a
               href="https://app.powerbi.com/view?r=eyJrIjoiYWUzNDgwYjQtNmYyYy00NWJlLWEwY2YtNjMxZDkzZGFmNDQ4IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
               target="_blank"
               type="button"
-              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-left text-left mb-2 mb-sm-0 mr-1"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-left text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
             >
               <span class="media align-items-center mn-top">
                 <span class="fab fa fa-globe font-size-24 mr-3"></span>
@@ -74,11 +90,13 @@
                 </span>
               </span>
             </a>
+          </div>
+          <div class="col col-sm-7 col-md-4">
             <a
               href="https://app.powerbi.com/view?r=eyJrIjoiNzYzNmQ5YTUtYTdkYS00NGJlLWEzOWYtNDI2YmU2ZDQxNzU0IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
               target="_blank"
               type="button"
-              class="btn font-weight-400 font-size-16 btn-dark text-left mb-2 mb-sm-0 mr-1"
+              class="btn font-weight-400 font-size-16 btn-dark text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
             >
               <span class="media align-items-center mn-top">
                 <span class="media-body text-center">
@@ -89,10 +107,12 @@
                 </span>
               </span>
             </a>
+          </div>
+          <div class="col col-sm-7 col-md-4">
             <router-link
               to="/maps"
               type="button"
-              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-right text-left mb-2 mb-sm-0 ml-1"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-right text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
             >
               <span class="media align-items-center mn-top">
                 <span class="fab fa fa-globe-americas font-size-24 mr-3"></span>
@@ -138,16 +158,17 @@ export default {
   data() {
     return {
       datos: {
-        confirmed: "5.379",
-        deaths: "244",
-        critical: "116"
+        confirmed: "5.597",
+        deaths: "253",
+        critical: "117",
+        time: "27/04/2020 03:30:00 (GMT-5)"
       }
     };
   }
 };
 </script>
 
-<style lang="scss" scope slot-scope>
+<style lang="scss" scoped>
 @-webkit-keyframes hvr-buzz-out {
   10% {
     -webkit-transform: translateX(3px) rotate(2deg);

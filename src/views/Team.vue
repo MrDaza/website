@@ -1,7 +1,7 @@
 <template>
   <div>
     <section class="team my-5 pt-5 none-v">
-      <div class="bg-checkerboard d-none d-sm-block mt-md-5 mt-0"></div>
+      <div class="bg-board d-block mt-md-5 mt-0"></div>
       <div class="container">
         <div class="row">
           <div class="col">
@@ -27,7 +27,7 @@
           <div
             v-for="(obj, index) in users_l1"
             v-bind:key="index"
-            class="ani-up col-6 col-sm-3 col-md-3 col-lg-3 mb-1 mt-3"
+            class="ani-up col-7 col-sm-6 col-md-4 col-lg-3 mb-md-2 mt-3"
           >
             <User v-bind:user="obj" />
           </div>
@@ -36,7 +36,7 @@
           <div
             v-for="(obj, index) in users_l2"
             v-bind:key="index"
-            class="ani-up col-6 col-sm-3 col-md-3 col-lg-3 mb-1 mt-3"
+            class="ani-up col-7 col-sm-6 col-md-4 col-lg-3 mb-md-2 mt-3"
           >
             <User v-bind:user="obj" />
           </div>
@@ -45,7 +45,7 @@
           <div
             v-for="(obj, index) in users_l3"
             v-bind:key="index"
-            class="ani-up col-6 col-sm-3 col-md-3 col-lg-3 mb-1 mt-3"
+            class="ani-up col-7 col-sm-6 col-md-4 col-lg-3 mb-md-2 mt-3"
           >
             <User v-bind:user="obj" />
           </div>
@@ -240,7 +240,7 @@ export default {
   }
 };
 </script>
-<style lang="scss" scope slot-scope>
+<style lang="scss">
 .bg-curve {
   fill: #f6f6f6;
 }
@@ -260,5 +260,78 @@ export default {
 .edge-shape-bottom > * {
   -webkit-transform-origin: top center;
   transform-origin: top center;
+}
+</style>
+
+<style lang="scss" scoped>
+.bg-board {
+  background-image: url(~@/assets/images/bg_green.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: 0;
+  transform: rotate(-9deg);
+}
+@media (max-width: 1199.99px) {
+  .bg-board {
+    background-image: url(~@/assets/images/mobile_green.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -220px;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 991.99px) {
+  .bg-board {
+    background-image: url(~@/assets/images/mobile_green.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -220px;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+}
+@media (max-width: 768px) {
+  .bg-board {
+    background-image: url(~@/assets/images/mobile_green.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    top: -200px;
+    left: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 575.99px) {
+  .bg-board {
+    background-image: url(~@/assets/images/mobile_green.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: -100px;
+    left: 150px;
+    transform: rotate(-60deg);
+  }
 }
 </style>

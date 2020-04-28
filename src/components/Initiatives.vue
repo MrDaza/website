@@ -9,7 +9,21 @@
           aria-expanded="false"
           :aria-controls="'collapse' + obj.code"
         >
-          <span class="text-left mr-4 mr-sm-0">
+          <span class="text-left mr-4 mr-sm-0 d-sm-none">
+            {{
+              obj.title.trim().length > 25
+                ? obj.title.trim().substring(0, 22) + " ..."
+                : obj.title.trim()
+            }}
+          </span>
+          <span class="text-left mr-4 mr-sm-0 d-none d-sm-flex d-md-none">
+            {{
+              obj.title.trim().length > 45
+                ? obj.title.trim().substring(0, 42) + " ..."
+                : obj.title.trim()
+            }}
+          </span>
+          <span class="text-left mr-4 mr-sm-0 d-none d-sm-none d-md-flex">
             {{ obj.title }}
           </span>
           <span class="accordion-arrow">

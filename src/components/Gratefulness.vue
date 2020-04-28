@@ -1,13 +1,15 @@
 <template>
-  <section>
+  <section class="pb-lg-4">
     <div class="container">
       <div class="row">
         <div class="col">
           <ul
-            class="list-unstyled d-flex flex-column justify-content-between text-center flex-sm-row justify-content-sm-center"
+            class="list-unstyled d-flex flex-column flex-md-row justify-content-center"
           >
-            <li class="m-3 py-sm-3">
-              <h5 class="h5 text-primary font-weight-bold text-sm-left">
+            <li class="my-2 mt-md-3 mr-lg-5">
+              <h5
+                class="h5 text-primary font-weight-bold text-center text-md-left"
+              >
                 The organizations of which <br />
                 the members of our team are part are:
               </h5>
@@ -15,7 +17,7 @@
             <li
               v-for="(obj, index) in institutions"
               :key="index"
-              class="mb-3 m-sm-3"
+              class="mt-md-0"
             >
               <img
                 class="icon-logo-svg img-fluid rounded mx-auto d-block justify-content-center mt-3"
@@ -68,7 +70,7 @@ export default {
   }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .icon-logo-svg {
   height: 3.5rem;
   opacity: 0.9;
