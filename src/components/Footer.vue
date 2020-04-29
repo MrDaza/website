@@ -2,50 +2,58 @@
   <footer class="pb-3 fixed-bottom bg-white">
     <div class="row">
       <div class="col">
-        <hr class="my-6" />
+        <hr class="my-2" />
       </div>
     </div>
-    <div class="container ">
-      <div class="row align-items-md-center">
-        <div class="col-md-4 mb-4 mb-md-0">
-          <div class="d-flex align-items-center">
-            <p class="font-size-14 mb-0">
-              <span>©</span>
-              <span class="text-copyright">&nbsp;Copyright</span>
-              <strong class="text-inhouse">&nbsp;inHouse S.A.S&nbsp;</strong>
-              <br>
-              <span class="text-reserve">2020 all rights reserved.&nbsp;</span>
-            </p>
-          </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 col-sm-6 col-md-4">
+          <p class="font-size-14 mb-0">
+            <span>©</span>
+            <span class="text-copyright">&nbsp;Copyright</span>
+            <strong class="text-inhouse">&nbsp;inHouse S.A.S&nbsp;</strong>
+            <br />
+            <span class="text-reserve d-none d-lg-flex">
+              2020 all rights reserved.&nbsp;
+            </span>
+          </p>
         </div>
-        <div class="col-sm-6 col-md-4 mb-4 mb-sm-0">
-          <ul class="list-inline list-group-flush  text-md-center mb-0 mn-top">
-            <li class="list-inline-item px-2">
-              <p class="font-size-14 mb-0">
-                <span class="text-build">Desarrollado con&nbsp;&nbsp;</span>
-                <a href="https://mr.daza.com.co" target="_black">
-                  <span class="text-love">
-                    &nbsp;❤️ MrDaza
-                  </span>
-                </a>
-              </p>
-            </li>
-          </ul>
+        <div class="col-6 col-sm-6 col-md-4 pt-0 pt-lg-3 text-center">
+          <p class="font-size-14 mb-0">
+            <span class="text-build">With by&nbsp;</span>
+            <a href="https://mr.daza.com.co" target="_black">
+              <span class="text-love">
+                &nbsp;❤️ MrDaza
+              </span>
+            </a>
+          </p>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-12 col-sm-6 col-md-4 pt-0 pt-lg-3 d-none d-md-block">
           <ul class="list-inline text-sm-right mb-0 font-size-14 mn-top">
             <li class="list-inline-item px-2">
-              <a class="list-group-item-action " href="https://www.instagram.com/CovidDataProject" target="_blank">
+              <a
+                class="list-group-item-action"
+                href="https://www.instagram.com/CovidDataProject"
+                target="_blank"
+              >
                 <span class="fab fa-instagram"></span>
               </a>
             </li>
             <li class="list-inline-item px-2">
-              <a class="list-group-item-action " href="https://twitter.com/CovidDataPROJ" target="_blank">
+              <a
+                class="list-group-item-action"
+                href="https://twitter.com/CovidDataPROJ"
+                target="_blank"
+              >
                 <span class="fab fa-twitter "></span>
               </a>
             </li>
             <li class="list-inline-item px-2">
-              <a class="list-group-item-action " href="https://github.com/CovidDataProject" target="_blank">
+              <a
+                class="list-group-item-action"
+                href="https://github.com/CovidDataProject"
+                target="_blank"
+              >
                 <span class="fab fa-github"></span>
               </a>
             </li>
@@ -59,8 +67,9 @@
 <script>
 export default {
   name: "Footer"
-}
+};
 </script>
+
 <style lang="scss" scoped>
 .footer {
   position: fixed;
@@ -83,35 +92,56 @@ export default {
     width: inherit;
     text-align: center;
   }
-  .footer-left .text-reserve {
+  .footer-left,
+  .text-reserve {
     display: none;
   }
 }
 @media (max-width: 991px) {
+  .container {
+    text-align: center;
+  }
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .footer-right,
+  .text-build {
+    display: none;
+  }
   .footer-left,
   .footer-right {
     width: inherit;
     text-align: center;
-  }
-  .footer-left .text-reserve {
-    display: none;
   }
 }
 @media (max-width: 767px) {
+  .container {
+    text-align: center;
+  }
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .text-copyright,
+  .footer-right,
+  .text-build {
+    display: none;
+  }
   .footer-left,
   .footer-right {
     width: inherit;
     text-align: center;
   }
-  .footer-left .text-reserve,
-  .footer-right .text-build {
-    display: none;
-  }
 }
 @media (max-width: 575px) {
-  .footer-left .text-reserve,
-  .footer-left .text-copyright,
-  .footer-right .text-build {
+  .container {
+    text-align: center;
+  }
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .text-copyright,
+  .footer-right,
+  .text-build {
     display: none;
   }
   .footer-left,

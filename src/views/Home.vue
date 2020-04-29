@@ -1,82 +1,302 @@
 <template>
   <div>
-    <section class="bg-primary mt-n spacer-double-lg mt-5">
+    <section class="bg-primary mt-5 py-5 none-v">
       <div class="container">
-        <div class="row mb-5">
-          <div class="col">
-            <div class="mb-5 pb-5 text-center mt-1">
-              <h2 class="display-4 text-white font-weight-bold">
+        <div class="row pt-2 pt-sm-0 pt-md-0 pt-lg-5 ">
+          <div class="col text-center">
+            <h1
+              class="display-3 text-white font-weight-bold d-none d-md-inline"
+            >
+              COVID-19 Colombia Project
+            </h1>
+            <h2 class="display-4 text-white font-weight-bold d-md-none">
+              COVID-19 <br />Colombia Project
+            </h2>
+            <br />
+            <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
+              The
+              <strong class="font-weight-bold">
                 COVID-19 Colombia Project
-              </h2>
-              <br />
-              <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
-                The <strong class="font-weight-bold">COVID-19 Colombia Project</strong>
-                collects and publishes the complete epidemiologic indicators and case data available for
-                <strong class="font-weight-bold">Colombia</strong>
-                <i> departments, municipalities, and cities</i>. Besides,
-                it is a space to show ideas or applications that help cope with the pandemic.
-              </p>
-              <br />
-              <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
-                This website is a resource to help advance the understanding of the virus and inform the public, in order to save lives by making better decisions through monitoring the outbreak.
+              </strong>
+              collects and publishes the complete epidemiologic indicators and
+              case data available for
+              <strong class="font-weight-bold">Colombia</strong>
+              <i> departments, municipalities, and cities</i>. Besides, it is a
+              space to show ideas or applications that help cope with the
+              pandemic.
+            </p>
+            <br />
+            <p class="w-md-60 mx-auto mb-0 lead text-white text-justify">
+              This website is a resource to help advance the understanding of
+              the virus and inform the public, in order to save lives by making
+              better decisions through monitoring the outbreak.
+            </p>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-auto">
+            <ul
+              class="radius-bottom-right px-5 list-unstyled rounded text-center d-flex  mb-0 bg-dark  flex-wrap justify-content-center"
+            >
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
+                <div class="h1 mb-2 text-danger font-weight-bold hvr-buzz-out">
+                  {{ datos.confirmed }}
+                </div>
+                <h6 class="mb-0 text-light">Total Confirmed</h6>
+              </li>
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
+                <div class="h1 mb-2 text-white font-weight-bold hvr-buzz-out">
+                  {{ datos.deaths }}
+                </div>
+                <h6 class="mb-0 text-light">Total Deaths</h6>
+              </li>
+              <li class="my-4 mx-4 mx-sm-2 mx-lg-5 buzz-out-load">
+                <div
+                  class="h1 mb-2 text-secondary font-weight-bold hvr-buzz-out"
+                >
+                  {{ datos.critical }}
+                </div>
+                <h6 class="mb-0 text-light">Total Critical Cases</h6>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 text-center">
+            <div class="w-75 mx-auto mt-4 text-center">
+              <p class="mb-0 text-white">
+                Last Updated at (DD/MM/YYYY)
+                <router-link to="/maps" href="#" class="hover-arrow text-info">
+                  {{ datos.time }}
+                  <span class="fa fa-arrow-right"></span>
+                </router-link>
               </p>
             </div>
           </div>
         </div>
-        <!--
-        <div class="row text-center">
-          <div class="col">
-            <button type="button" class="btn font-weight-400 font-size-16 btn-secondary btn-radius-bottom-left text-left mb-2 mb-sm-0 mr-1">
+        <div class="row d-flex justify-content-center text-center mt-5">
+          <div class="col col-sm-7 col-md-4">
+            <a
+              href="https://app.powerbi.com/view?r=eyJrIjoiYWUzNDgwYjQtNmYyYy00NWJlLWEwY2YtNjMxZDkzZGFmNDQ4IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
+              target="_blank"
+              type="button"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-left text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
+            >
               <span class="media align-items-center mn-top">
-                <span class="fab fa-apple font-size-24 mr-3"></span>
+                <span class="fab fa fa-globe font-size-24 mr-3"></span>
                 <span class="media-body">
                   <span class="d-block">Get it on</span>
-                  <strong class="font-size-15 mn-top">Mapa Web</strong>
+                  <strong class="font-size-15 mn-top">Map Web</strong>
                 </span>
               </span>
-            </button>
-            <button type="button" class="btn font-weight-400 font-size-16 btn-light btn-radius-bottom-right text-left mb-2 mb-sm-0 ml-1">
-              <span class="media align-items-center mn-top">
-                <span class="fab fa-google-play font-size-24 mr-3"></span>
-                <span class="media-body">
-                  <span class="d-block">Get it on</span>
-                  <strong class="font-size-15 mn-top">Mapa App</strong>
-                </span>
-              </span>
-            </button>
+            </a>
           </div>
+          <div class="col col-sm-7 col-md-4">
+            <a
+              href="https://app.powerbi.com/view?r=eyJrIjoiNzYzNmQ5YTUtYTdkYS00NGJlLWEzOWYtNDI2YmU2ZDQxNzU0IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
+              target="_blank"
+              type="button"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-right text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
+            >
+              <span class="media align-items-center mn-top">
+                <span class="fab fa fa-globe-americas font-size-24 mr-3"></span>
+                <span class="media-body text-center">
+                  <span class="d-block">Get it on spanish</span>
+                  <strong class="font-size-15 mn-top">
+                    Map Web
+                  </strong>
+                </span>
+              </span>
+            </a>
+          </div>
+          <!--
+          <div class="col col-sm-7 col-md-4">
+            <router-link
+              to="/maps"
+              type="button"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-right text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
+            >
+              <span class="media align-items-center mn-top">
+                <span class="fab fa fa-globe-americas font-size-24 mr-3"></span>
+                <span class="media-body">
+                  <span class="d-block">Get it on</span>
+                  <strong class="font-size-15 mn-top">Map Site</strong>
+                </span>
+              </span>
+            </router-link>
+          </div>
+          -->
         </div>
-        -->
       </div>
     </section>
-    <div class="curved-shape-container position-relative mt-1 d-none d-md-block">
-      <div class="curved-shape">
-        <svg version="1.1" class="svg-color" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 2560 67" enable-background="new 0 0 2560 67;" xml:space="preserve">
-          <path class="st0" d="M0,0c21.8,1.4,43.5,2.9,65.3,4.3c14.8,0.9,29.6,1.8,44.4,2.6c19.1,1.1,38.3,2.2,57.4,3.2
-              c17.8,1,35.6,1.9,53.4,2.8c25.7,1.3,51.4,2.6,77.1,3.9c19.8,1,39.6,1.8,59.4,2.7c25.1,1.1,50.3,2.2,75.4,3.2c23.5,1,47,1.9,70.4,2.8
-              c35.7,1.3,71.4,2.6,107.2,3.8c29.6,1,59.3,1.9,88.9,2.7c41.1,1.1,82.3,2.2,123.4,3.3c26.2,0.6,52.3,1.3,78.5,1.7
-              c73.4,1.1,146.8,2.2,220.2,3.1c126.6,1.5,253.1,1.4,379.7,0.4c54.1-0.4,108.2-1,162.2-1.9c51.4-0.8,102.8-2.1,154.2-3.3
-              c34.2-0.8,68.3-1.6,102.5-2.7c41.1-1.3,82.3-2.8,123.4-4.3c26.2-1,52.5-2,78.7-3.2c31-1.4,61.9-2.8,92.9-4.3
-              c25-1.2,49.9-2.4,74.9-3.7c25.4-1.3,50.7-2.8,76.1-4.3c20.7-1.2,41.4-2.4,62.1-3.7c21.5-1.4,43.1-2.8,64.6-4.3
-              c17.9-1.2,35.7-2.5,53.6-3.7c4.7-0.3,9.3-0.7,14-1c0,22.3,0,44.7,0,67C1706.7,67,853.3,67,0,67C0,44.7,0,22.3,0,0z"></path>
-        </svg>
-      </div>
-    </div>
-    <Gratefulness></Gratefulness>
+    <CurveTop v-bind:bg01="'#f8f9fa'" />
+    <Notices
+      style="margin: 0 !important; padding: 0 !important"
+      class="border-none"
+    />
   </div>
 </template>
-
 <script>
-import Gratefulness from "@/components/Gratefulness.vue";
+import Vue from "vue";
+//import Gratefulness from "@/components/Gratefulness";
+import CurveTop from "@/components/CurveTop";
+//import Notices from "@/views/Notices";
+Vue.component("Notices", function(resolve) {
+  setTimeout(function() {
+    require(["@/views/Notices"], resolve);
+  }, 600);
+});
+//Vue.component("Notices", require("@/views/Notices").default);//ok!
+
 export default {
   name: "Home",
   components: {
-    Gratefulness
+    //Gratefulness,
+    //Notices,
+    CurveTop
+  },
+  methods: {
+    loader: () => {
+      window.$("section").fadeIn();
+    }
+  },
+  data() {
+    return {
+      datos: {
+        confirmed: "5.597",
+        deaths: "253",
+        critical: "117",
+        time: "27/04/2020 03:30:00 (GMT-5)"
+      }
+    };
   }
 };
 </script>
-<style lang="scss">
-.svg-color{
-  fill:#ffffff;
+
+<style lang="scss" scoped>
+@-webkit-keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+@keyframes hvr-buzz-out {
+  10% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  20% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  30% {
+    -webkit-transform: translateX(3px) rotate(2deg);
+    transform: translateX(3px) rotate(2deg);
+  }
+  40% {
+    -webkit-transform: translateX(-3px) rotate(-2deg);
+    transform: translateX(-3px) rotate(-2deg);
+  }
+  50% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  60% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  70% {
+    -webkit-transform: translateX(2px) rotate(1deg);
+    transform: translateX(2px) rotate(1deg);
+  }
+  80% {
+    -webkit-transform: translateX(-2px) rotate(-1deg);
+    transform: translateX(-2px) rotate(-1deg);
+  }
+  90% {
+    -webkit-transform: translateX(1px) rotate(0);
+    transform: translateX(1px) rotate(0);
+  }
+  100% {
+    -webkit-transform: translateX(-1px) rotate(0);
+    transform: translateX(-1px) rotate(0);
+  }
+}
+.buzz-out-load {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+.hvr-buzz-out {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.hvr-buzz-out:hover,
+.hvr-buzz-out:focus,
+.hvr-buzz-out:active {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+
+  -webkit-animation-name: hvr-buzz-out;
+  animation-name: hvr-buzz-out;
+  -webkit-animation-duration: 0.75s;
+  animation-duration: 0.75s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
 }
 </style>

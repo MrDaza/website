@@ -1,41 +1,30 @@
 <template>
-  <section class="bg-white mt-n mt-3">
+  <section class="pb-lg-4">
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-auto">
+      <div class="row">
+        <div class="col">
           <ul
-            class="list-unstyled d-flex flex-wrap justify-content-center mb-0"
+            class="list-unstyled d-flex flex-column flex-md-row justify-content-center"
           >
-            <li class="my-3 mx-3 mx-lg-4">
-              <h3 class="h5 text-primary">Gratefulness</h3>
-            </li>
-            <li class="my-3 mx-3 mx-lg-4">
-              <img
-                class="icon-logo-svg"
-                src="@/assets/images/logo/who.svg"
-                alt=""
+            <li class="my-2 mt-md-3 mr-lg-5">
+              <h5
+                class="h5 text-primary font-weight-bold text-center text-md-left"
               >
+                The organizations of which <br />
+                the members of our team are part are:
+              </h5>
             </li>
-            <li class="my-3 mx-3 mx-lg-4">
+            <li
+              v-for="(obj, index) in institutions"
+              :key="index"
+              class="mt-md-0"
+            >
               <img
-                class="icon-logo-svg"
-                src="@/assets/images/logo/minsalud.png"
-                alt=""
-              >
-            </li>
-            <li class="my-3 mx-3 mx-lg-4">
-              <img
-                class="icon-logo-svg"
-                src="@/assets/images/logo/uninorte.jpg"
-                alt=""
-              >
-            </li>
-            <li class="my-3 mx-3 mx-lg-4">
-              <img
-                class="icon-logo-svg"
-                src="@/assets/images/logo/konrad_lorenz.png"
-                alt=""
-              >
+                class="icon-logo-svg img-fluid rounded mx-auto d-block justify-content-center mt-3"
+                :src="require('@/assets/images/logo/' + obj.picture)"
+                :alt="obj.alt"
+                :title="obj.title"
+              />
             </li>
           </ul>
         </div>
@@ -46,10 +35,53 @@
 
 <script>
 export default {
-  name: "Gratefulness"
+  name: "Gratefulness",
+  data() {
+    return {
+      institutions: [
+        {
+          title: "Universidad de la Costa CUC",
+          picture: "cuc.png",
+          alt: "Gratefulness Universidad de la Costa CUC"
+        },
+        {
+          title: "Universidad EAN",
+          picture: "ean.jpeg",
+          alt: "Gratefulness Universidad EAN"
+        },
+        /*
+        {
+          title: "Konrad Lorenz",
+          picture: "konrad_lorenz.png",
+          alt: "Gratefulness Konrad Lorenz"
+        },
+
+        {
+          title: "Universidad del Norte",
+          picture: "uninorte.jpg",
+          alt: "Gratefulness Universidad del Norte"
+        },*/
+        {
+          title: "Escuela de Postgrados Fuerza Aérea Colombiana",
+          picture: "epfac.png",
+          alt: "Gratefulness Escuela de Postgrados Fuerza Aérea Colombiana"
+        },
+        {
+          title: "Universidad Sergío Arboleda",
+          picture: "sergio_arboleda.jpg",
+          alt: "Gratefulness Universidad Sergio Arboleda"
+        },
+        {
+          title: "Universidad de la Salle",
+          picture: "lasalle.png",
+          alt: "Gratefulness Universidad de la Salle"
+        }
+      ]
+    };
+  }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .icon-logo-svg {
   height: 3.5rem;
   opacity: 0.9;

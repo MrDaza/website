@@ -1,0 +1,84 @@
+.scroll-to-top:not(.active) {
+  opacity: 0;
+  pointer-events: none;
+  color: #fff;
+  background-color: $secondary;
+  border-color: $secondary;
+}
+
+.scroll-to-top.active:hover {
+  border-radius: 0.25rem;
+  color: #ffffff;
+}
+
+.scroll-to-top {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  background-color: $secondary;
+  border-color: $secondary;
+  text-align: center;
+  right: 4.875rem;
+  bottom: 6.6875rem;
+  padding-top: 0.65rem;
+  z-index: 100;
+  color: #ffffff;
+  font-size: 0.85rem;
+  border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+}
+
+@media (max-width: 1199.99px) {
+}
+
+@media (max-width: 991.99px) {
+  .scroll-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    background-color: $secondary;
+    border-color: $secondary;
+    text-align: center;
+    right: 2.875rem;
+    bottom: 3.6875rem;
+    padding-top: 0.65rem;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 0.85rem;
+    border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+  }
+}
+
+@media (max-width: 767.99px) {
+  .scroll-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    background-color: $secondary;
+    border-color: $secondary;
+    text-align: center;
+    right: 2.875rem;
+    bottom: 3.6875rem;
+    padding-top: 0.65rem;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 0.85rem;
+    border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+  }
+}
+@media (max-width: 575.99px) {
+  .scroll-to-top {
+    position: fixed;
+    width: 3rem;
+    height: 3rem;
+    background-color: $secondary;
+    border-color: $secondary;
+    text-align: center;
+    right: 1.875rem;
+    bottom: 3.6875rem;
+    padding-top: 0.65rem;
+    z-index: 100;
+    color: #ffffff;
+    font-size: 0.85rem;
+    border-radius: 0.25rem 0.25rem 1rem 0.25rem;
+  }
+}
