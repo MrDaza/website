@@ -40,11 +40,22 @@ export default {
     return {
       institutions: [
         {
+          title: "Universidad de la Costa CUC",
+          picture: "cuc.png",
+          alt: "Gratefulness Universidad de la Costa CUC"
+        },
+        {
+          title: "Universidad EAN",
+          picture: "ean.jpeg",
+          alt: "Gratefulness Universidad EAN"
+        },
+        /*
+        {
           title: "Konrad Lorenz",
           picture: "konrad_lorenz.png",
           alt: "Gratefulness Konrad Lorenz"
         },
-        /*
+
         {
           title: "Universidad del Norte",
           picture: "uninorte.jpg",

@@ -68,7 +68,7 @@ export default {
         {
           code: "One",
           title: "Novel Coronavirus (2019-nCoV) Data Repository",
-          created: "Developed by Julio Mario Daza, and Elis Daza Escorcia.",
+          created: "Developed by Julio Mario Daza and Elis Daza Escorcia.",
           desc:
             "Data repository for the 2019 Novel Coronavirus (formerly known as 2019-nCoV infection or simply COVID-19). The main objective of this repository is to facilitate access to COVID-19 data in Colombia to bring a more comprehensive picture of the current situation.",
           lear_more_to: "/proposes/novel_coronavirus",
@@ -83,7 +83,7 @@ export default {
         {
           code: "Two",
           title: "App Covid19 Colombia",
-          created: "Developed by Elis Daza Escorcia.",
+          created: "Developed by Julio Mario Daza and Elis Daza Escorcia.",
           desc:
             "Movil applications to aid in outbreak expansion time and help to that people get informed out about COVID-19 and know what to do in case of symptoms. Download in Google Play",
           lear_more_to: "/proposes/app_covid19",
@@ -114,7 +114,7 @@ export default {
         {
           code: "Four",
           title: "COVID-19 Colombia Visual Dashboard",
-          created: "Developed by Julio Mario Daza",
+          created: "Developed by Julio Mario Daza and Elis Daza Escorcia.",
           desc:
             "Visual Dashboard for the 2019 Novel Coronavirus (formerly known as 2019-nCoV infection or simply COVID-19).\n The main objective of this Dashboard is to facilitate access to COVID-19 data in Colombia to bring a more comprehensive picture of the current situation in all departments, municipals, and cities",
           lear_more_to: "/proposes/visual_dashboard",

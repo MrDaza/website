@@ -96,18 +96,20 @@
               href="https://app.powerbi.com/view?r=eyJrIjoiNzYzNmQ5YTUtYTdkYS00NGJlLWEzOWYtNDI2YmU2ZDQxNzU0IiwidCI6IjAzZTFiMjI2LTU3ODktNGE5Ny05MGY2LTQ0YTQ0MjQxYmE2ZCIsImMiOjR9"
               target="_blank"
               type="button"
-              class="btn font-weight-400 font-size-16 btn-dark text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
+              class="btn font-weight-400 font-size-16 btn-dark btn-radius-bottom-right text-center col-10 col-md-12 col-lg-9 mb-2 mb-lg-5 mb-0"
             >
               <span class="media align-items-center mn-top">
+                <span class="fab fa fa-globe-americas font-size-24 mr-3"></span>
                 <span class="media-body text-center">
                   <span class="d-block">Get it on spanish</span>
                   <strong class="font-size-15 mn-top">
-                    Map web
+                    Map Web
                   </strong>
                 </span>
               </span>
             </a>
           </div>
+          <!--
           <div class="col col-sm-7 col-md-4">
             <router-link
               to="/maps"
@@ -123,17 +125,20 @@
               </span>
             </router-link>
           </div>
+          -->
         </div>
       </div>
     </section>
-    <CurveTop v-bind:bg01="'#ffffff'" />
-    <Gratefulness />
-    <Notices style="margin: 0 !important; padding: 0 !important" />
+    <CurveTop v-bind:bg01="'#f8f9fa'" />
+    <Notices
+      style="margin: 0 !important; padding: 0 !important"
+      class="border-none"
+    />
   </div>
 </template>
 <script>
 import Vue from "vue";
-import Gratefulness from "@/components/Gratefulness";
+//import Gratefulness from "@/components/Gratefulness";
 import CurveTop from "@/components/CurveTop";
 //import Notices from "@/views/Notices";
 Vue.component("Notices", function(resolve) {
@@ -146,7 +151,7 @@ Vue.component("Notices", function(resolve) {
 export default {
   name: "Home",
   components: {
-    Gratefulness,
+    //Gratefulness,
     //Notices,
     CurveTop
   },
