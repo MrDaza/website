@@ -2,23 +2,25 @@
   <footer class="pb-3 fixed-bottom bg-white">
     <div class="row">
       <div class="col">
-        <hr class="my-sm-6" />
+        <hr class="my-2" />
       </div>
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-12 col-sm-6 col-md-4">
+        <div class="col-6 col-sm-6 col-md-4">
           <p class="font-size-14 mb-0">
             <span>©</span>
             <span class="text-copyright">&nbsp;Copyright</span>
             <strong class="text-inhouse">&nbsp;inHouse S.A.S&nbsp;</strong>
             <br />
-            <span class="text-reserve">2020 all rights reserved.&nbsp;</span>
+            <span class="text-reserve d-none d-lg-flex">
+              2020 all rights reserved.&nbsp;
+            </span>
           </p>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 pt-0 pt-sm-3 text-center">
+        <div class="col-6 col-sm-6 col-md-4 pt-0 pt-lg-3 text-center">
           <p class="font-size-14 mb-0">
-            <span class="text-build">Desarrollado con&nbsp;&nbsp;</span>
+            <span class="text-build">With by&nbsp;</span>
             <a href="https://mr.daza.com.co" target="_black">
               <span class="text-love">
                 &nbsp;❤️ MrDaza
@@ -26,7 +28,7 @@
             </a>
           </p>
         </div>
-        <div class="col-12 col-sm-6 col-md-4 pt-0 pt-sm-3 ">
+        <div class="col-12 col-sm-6 col-md-4 pt-0 pt-lg-3 d-none d-md-block">
           <ul class="list-inline text-sm-right mb-0 font-size-14 mn-top">
             <li class="list-inline-item px-2">
               <a
@@ -90,38 +92,56 @@ export default {
     width: inherit;
     text-align: center;
   }
-  .footer-left .text-reserve {
+  .footer-left,
+  .text-reserve {
     display: none;
   }
 }
 @media (max-width: 991px) {
+  .container {
+    text-align: center;
+  }
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .footer-right,
+  .text-build {
+    display: none;
+  }
   .footer-left,
   .footer-right {
     width: inherit;
     text-align: center;
-  }
-  .footer-left .text-reserve {
-    display: none;
   }
 }
 @media (max-width: 767px) {
+  .container {
+    text-align: center;
+  }
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .text-copyright,
+  .footer-right,
+  .text-build {
+    display: none;
+  }
   .footer-left,
   .footer-right {
     width: inherit;
     text-align: center;
-  }
-  .footer-left .text-reserve,
-  .footer-right .text-build {
-    display: none;
   }
 }
 @media (max-width: 575px) {
   .container {
     text-align: center;
   }
-  .footer-left .text-reserve,
-  .footer-left .text-copyright,
-  .footer-right .text-build {
+  .footer-left,
+  .text-reserve,
+  .footer-left,
+  .text-copyright,
+  .footer-right,
+  .text-build {
     display: none;
   }
   .footer-left,

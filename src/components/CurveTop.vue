@@ -3,7 +3,6 @@
     <div class="curved-shape">
       <svg
         version="1.1"
-        class="svg-color"
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink"
         x="0px"
@@ -13,7 +12,7 @@
         xml:space="preserve"
       >
         <path
-          class="bg-white"
+          :fill="bg01 ? bg01 : '#f6f6'"
           d="M0,0c21.8,1.4,43.5,2.9,65.3,4.3c14.8,0.9,29.6,1.8,44.4,2.6c19.1,1.1,38.3,2.2,57.4,3.2
             c17.8,1,35.6,1.9,53.4,2.8c25.7,1.3,51.4,2.6,77.1,3.9c19.8,1,39.6,1.8,59.4,2.7c25.1,1.1,50.3,2.2,75.4,3.2c23.5,1,47,1.9,70.4,2.8
             c35.7,1.3,71.4,2.6,107.2,3.8c29.6,1,59.3,1.9,88.9,2.7c41.1,1.1,82.3,2.2,123.4,3.3c26.2,0.6,52.3,1.3,78.5,1.7
@@ -29,12 +28,10 @@
 
 <script>
 export default {
+  props: {
+    bg01: String,
+    bg02: String
+  },
   name: "CurveTop"
 };
 </script>
-
-<style lang="scss">
-.bg-white {
-  fill: #ffffff;
-}
-</style>

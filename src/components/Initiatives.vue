@@ -9,7 +9,21 @@
           aria-expanded="false"
           :aria-controls="'collapse' + obj.code"
         >
-          <span class="text-left mr-4 mr-sm-0">
+          <span class="text-left mr-4 mr-sm-0 d-sm-none">
+            {{
+              obj.title.trim().length > 25
+                ? obj.title.trim().substring(0, 22) + " ..."
+                : obj.title.trim()
+            }}
+          </span>
+          <span class="text-left mr-4 mr-sm-0 d-none d-sm-flex d-md-none">
+            {{
+              obj.title.trim().length > 45
+                ? obj.title.trim().substring(0, 42) + " ..."
+                : obj.title.trim()
+            }}
+          </span>
+          <span class="text-left mr-4 mr-sm-0 d-none d-sm-none d-md-flex">
             {{ obj.title }}
           </span>
           <span class="accordion-arrow">
@@ -53,7 +67,7 @@
               class="btn btn-sx btn-radius-bottom-right btn-secondary justify-content-end"
             >
               <span :class="link.icon"></span>
-              <span class="mn-top">{{ link.title }}</span>
+              <span class="ml-3">{{ link.title }}</span>
             </a>
           </div>
         </div>
@@ -64,7 +78,7 @@
 
 <script>
 export default {
-  name: "Proposes",
+  name: "Initiatives",
   props: {
     obj: Object
   }

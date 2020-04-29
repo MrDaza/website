@@ -1,10 +1,10 @@
 <template>
-  <section class="about spacer-double-lg mt-5 mt-sm-0 none-v">
+  <section class="about my-5 pt-5 none-v">
     <div class="bg-aboutboard d-block mt-md-5 mt-0"></div>
     <div class="container">
       <div class="row">
         <div class="col">
-          <div class="mb-5 pb-5 mt-1">
+          <div class="my-4 pt-2">
             <h2 class="display-4 text-center text-primary font-weight-bold">
               About Us
             </h2>
@@ -58,18 +58,46 @@ export default {
   }
 };
 </script>
-<style lang="scss">
-@media (min-width: 769px) {
+<style lang="scss" scoped>
+.bg-aboutboard {
+  background-image: url(~@/assets/images/aboutboard.png);
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: auto;
+  left: 0;
+  transform: rotate(-9deg);
+}
+@media (max-width: 1199.99px) {
   .bg-aboutboard {
-    background-image: url(~@/assets/images/aboutboard.png);
+    background-image: url(~@/assets/images/mobile_aboutboard.png);
     background-size: auto;
     background-repeat: no-repeat;
     background-position: top center;
     position: absolute;
     width: 100%;
     height: 100%;
-    top: auto;
+    top: -220px;
     left: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 991.99px) {
+  .bg-aboutboard {
+    background-image: url(~@/assets/images/mobile_aboutboard.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: -220px;
+    left: 0;
+    transform: rotate(-90deg);
   }
 }
 @media (max-width: 768px) {
@@ -79,10 +107,26 @@ export default {
     background-repeat: no-repeat;
     background-position: top center;
     position: absolute;
-    width: 100%;
+    width: 105%;
     height: 100%;
-    top: auto;
+    top: -200px;
     left: 0;
+    transform: rotate(-90deg);
+  }
+}
+
+@media (max-width: 575.99px) {
+  .bg-aboutboard {
+    background-image: url(~@/assets/images/mobile_aboutboard.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: -100px;
+    left: 150px;
+    transform: rotate(-60deg);
   }
 }
 

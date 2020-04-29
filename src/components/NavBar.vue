@@ -3,45 +3,42 @@
     <div class="header-section">
       <div class="container ">
         <nav class="navbar navbar-expand-lg">
-          <a class="navbar-brand" href="#">
-            <div class="d-inline-flex">
-              <router-link to="/" class="nav-link">
-                <img
-                  src="@/assets/images/CovidDataProject_100x100.png"
-                  width="60"
-                  height="60"
-                  class="d-inline-block"
-                  alt="CovidDataProject"
-                />
-              </router-link>
-              <div class="d-flex flex-column">
-                <a
-                  href="/"
-                  class="nav-link font-weight-bold display-6 text-white"
-                >
-                  The Covid-19
-                  <br />
-                  Colombia Project
-                </a>
-              </div>
-              <button
-                class="navbar-toggler text-white"
-                type="button"
-                data-toggle="collapse"
-                data-target="#navBarMobile"
-                aria-controls="navBarMobile"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-              >
-                <span class="navbar-toggler-icon fa fa-align-justify"></span>
-              </button>
-            </div>
-          </a>
+          <div class="navbar-brand d-flex row">
+            <router-link to="/" class="nav-link col-2 col-md-2 col-lg-3">
+              <img
+                src="@/assets/images/CovidDataProject_100x100.png"
+                width="60"
+                height="60"
+                class="d-inline-block"
+                alt="CovidDataProject"
+              />
+            </router-link>
+            <a
+              href="/"
+              class="nav-link font-weight-bold display-6 text-white col-9 col-md-9"
+            >
+              The Covid-19<br />Colombia Project
+            </a>
+            <button
+              class="navbar-toggler text-white text-right col-1"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navBarMobile"
+              aria-controls="navBarMobile"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon fa fa-align-justify"></span>
+            </button>
+          </div>
+
           <div
             class="collapse navbar-collapse justify-content-end"
             id="navBarMobile"
           >
-            <ul class="navbar-nav">
+            <ul
+              class="navbar-nav d-flex justify-content-center align-items-center"
+            >
               <li class="nav-item" v-on:click="clickMenu">
                 <router-link
                   to="/"
@@ -148,3 +145,10 @@ export default {
   }
 };
 </script>
+<style scoped>
+@media (max-width: 991.99px) {
+  .navbar-brand {
+    width: 100% !important;
+  }
+}
+</style>
